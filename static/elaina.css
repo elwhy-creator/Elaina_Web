@@ -425,6 +425,7 @@ header {
 .section-title {
     text-align: center;
     margin-bottom: 1.5rem;
+	color: var(--text-color);
 }
 
 .movie-video-grid, .movie-image-grid, .shorts-grid, .gallery-grid, .elaina-videos-grid, .elaina-image-grid,
