@@ -4,7 +4,7 @@ fetch('static/songs.json')
   .then(data => {
     // Ambil daftar lagu anime
     const animeSongs = data.anime_songs;
-    const songList = document.getElementById('playlist1'); // Asumsikan Anda memiliki elemen ini di HTML
+    const animeSongList = document.getElementById('playlist1'); // Asumsikan Anda memiliki elemen ini di HTML
 
     // Loop melalui setiap lagu anime
     animeSongs.forEach(song => {
@@ -19,12 +19,12 @@ fetch('static/songs.json')
             <source src="${song.src}" type="audio/mpeg">
         </audio>
       `;
-      songList.appendChild(listItem);
+      animeSongList.appendChild(listItem);
     });
 
     // Lakukan hal yang sama untuk mixed album
     const mixedSongs = data.mixed_album_songs;
-    const songList = document.getElementById('playlist2'); // Asumsikan Anda memiliki elemen ini
+    const mixedSongList = document.getElementById('playlist2'); // Asumsikan Anda memiliki elemen ini
 
     mixedSongs.forEach(song => {
       const listItem = document.createElement('li');
@@ -38,6 +38,6 @@ fetch('static/songs.json')
             <source src="${song.src}" type="audio/mpeg">
         </audio>
       `;
-      songList.appendChild(listItem);
+      mixedSongList.appendChild(listItem);
     });
   });
