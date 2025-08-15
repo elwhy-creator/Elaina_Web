@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='elaina.css') }}">
+    <link rel="stylesheet" href="static/elaina.css">
 </head>
 <body id="body" class="drak-mode"> <header>
         <div class="header-container">
@@ -19,8 +19,8 @@
             <nav class="header-nav">
                 <ul>
                     <li><a href="{{ url_for('index') }}" class="{% if request.endpoint == 'home' %}active{% endif %}">Home</a></li>
-                    <li><a href="{{ url_for('anime_page') }}" class="{% if request.endpoint == 'anime_page' %}active{% endif %}">Anime</a></li>
-                    <li><a href="{{ url_for('shorts_page') }}" class="{% if request.endpoint == 'shorts_page' %}active{% endif %}">Shorts</a></li>
+                    <li><a href="templates/anime.html" class="{% if request.endpoint == 'anime_page' %}active{% endif %}">Anime</a></li>
+                    <li><a href="templates/shorts.html" class="{% if request.endpoint == 'shorts_page' %}active{% endif %}">Shorts</a></li>
                     <li><a href="{{ url_for('elaina_page') }}" class="{% if request.endpoint == 'elaina_page' %}active{% endif %}">Elaina</a></li>
                     <li><a href="{{ url_for('gallery_page') }}" class="{% if request.endpoint == 'gallery_page' %}active{% endif %}">Gallery</a></li>
                     <li><a href="{{ url_for('movies_page') }}" class="{% if request.endpoint == 'movies_page' %}active{% endif %}">Movies</a></li>
