@@ -1,0 +1,492 @@
+{% extends 'base.html' %} {# WAJIB: Mewarisi dari base.html #}
+
+{% block title %}Image Gallery - Elaina Chan{% endblock %} {# Judul unik untuk halaman ini #}
+
+{% block content %} {# Blok konten untuk halaman ini #}
+			<h1 class="gallery-title">Elaina Chan's Image Gallery</h1>
+	    <p class="gallery-p">koleksi gambar-gambar indah dan menarik.</p>
+           <div class="mini-nav-buttons">
+<a href="{{ url_for('elaina_page') }}" class="mini-nav-button"><i class="fas fa-share-from-square"></i>Elaina Collection<i class="fas fa-star-of-david"></i></a>
+<a href="{{ url_for('movies_page') }}" class="mini-nav-button"><i class="fas fa-share-from-square"></i> Go To Movies<i class="fab fa-studiovinari"></i></a></div>
+<a href="{{ url_for('anime_page') }}" class="mini-nav-button"><i class="fas fa-share-from-square"></i> Anime Collection<i class="fab fa-grunt"></i></a></div>
+
+					<div id="gallery" class="gallery-container">
+    					<div class="gallery-grid">
+
+    					    <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1Y9V7Z24McTEshQFyr_QM37Uk10FYp0fp" alt="Coba aja Dulu" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+   	    <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+        <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1XqteNxb4OJMvr1K7AI81nifPvu9lDLiN" alt="Onyly My Love" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+        <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1WoT1OUerBbrrMg-nn-6OCDDSlitSzk89" alt="Onyly My Love" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan0.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+        <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1XnQ1FBr4nwC-WSM9_zXOo4DePN0w-Z7J" alt="Onyly My Love" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+        <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1D-VIfnRPpXCNTJqDVxb4xMMRjLlm9ujO" alt="Elaina" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+        <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1LKD1HiInwnE7YhAuaMs01txS4IotCLi9" alt="Elaina" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+        <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1XoKiyhaHwAoc97zNZQPWS4MO8wQckAjl" alt="Onyly My Love" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+        <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1K9Q8diaJEleUT5BHdemJC2KWIi1wU5DY" alt="Manisnya" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+        <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1L5y1LtQiUg2Xo9ZaRbPA-EPzaM5PQaIF" alt="Manisnya" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+        <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1Jd_qi5FRX9luW_fVMJnr7YEWixpComhC" alt="Elaina" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan0.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+        <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1KzSNShnURgMdsYayknWRIoNEVPzZtppu" alt="Elaina" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan0.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+     	<div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1KHERFXbD7ikexqn4JDTOLdyh3xU8Cy-6" alt="Elaina" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+           </div>
+             <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1KzB3Y0u0vTJ7SGlnJ4kImjqlTQh9Tg8Q" alt="Amazing" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+	  </div>
+        <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1KGU5xJsCBR0uajHG_UL_fA0WEX0B-sej" alt="Manisnya" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+          </div>
+        <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1KFt-nt-4Cj66EkYxUAydzqbKSIZZj_rQ" alt="Manisnya" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+          </div>
+        <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1Kx21oxvJsT97mKggi1bqgkdu02rv7l6D" alt="Mengoda" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+          </div>
+        <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1KELNHL-KovW_F2hmGjLoxnMOkuUVHpvF" alt="Manisnya" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+          </div>
+	 <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1Kv4QZ3wRqghORldXTNfF9Dud-yom_Hw-" alt="Elaina" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+          </div>
+         <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1Kti_HNgIZHT73sq8VAPd48C_hV9pbt-a" alt="Siap Melayani Anda Tuan Kei" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+          </div>
+         <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1Kol5QaQYC7pQjjDpPn8Nrt17pR16jSqt" alt="Elaina" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan0.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+          </div>
+         <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1LgO_rjEYSX-xGwrI06YyTjlfoME5SZSJ" alt="Elaina" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+          </div>
+         <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1IkBrgm6AJdQI7SVY8WebzPXBSCO6KL4u" alt="Kawai" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1IhYLupzHA4FvKlT8EbTGRaKAqOzYfAvm" alt="Kawai" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1Lf-QQlGsYYead4cr6NSaz8FXvm6ppqoL" alt="Kakoi" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1LejI-XAn2ITTCdFScsqYPJjP36q8Dgj2" alt="Pengen Nyodok" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+           </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1CwtRkADgeD1gsPbP8n6cH0Lus2DvCyV3" alt="Kawaii" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+		</div>
+	       <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1LcXhBNofCmajZHKtLzWJdBbmDctYePc3" alt="Kakoi" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+           </div>
+        <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1YJeE2eRFAsANR-U4cHNKo13vsQOM-2Xm" alt="Elaina Chan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+           </div>
+            <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1ZD5in28Q7HwHiEaXONCsisFk38sBad7r" alt="Elaina Chan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+           </div>
+        <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1ZBpTk4qhqz8Zy4ki2W5PgBFHcabI-kuA" alt="Elaina Chan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+           </div>
+        <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1Z4JJVUhgzOHLn1mYeLLvbVaGskcEN5pQ" alt="Elaina Chan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+           </div>
+        <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1ZAkmDBM-yYpilC5MElGTITJe_wnhWDOJ" alt="Elaina Chan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+           </div>
+        <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1Z47yJPbvJ80kZ47vlG49__HzR0Z8W-kr" alt="Elaina Chan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+           </div>
+        <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1Z08V5sko7R2bB9_hXbbCZhBpUut_xHWL" alt="Elaina Chan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+           </div>
+        <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1Yy58y4jTcaCKQ1-NWMGC7n2jvPdrcu7U" alt="Elaina Chan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+           </div>
+        <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1YwzY2sfmovYLI6nlYoTYqh_OZG8Zqeoo" alt="Elaina Chan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+	</div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1LcOW7B1reJUItg-msqRREbGUpPvCtdEY" alt="Kakoi" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan0.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1GaaJZ8ODIQXlC0-qCACMWOLCCOr0IDGo" alt="Moe Chan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1GZrNIFDt_I95KLus235os01Bo8F4pUK_" alt="Moe Chan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+		</div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1Cu2l7CdC_tCO3aHon27ThgV0A5V7FwVC" alt="Casual Mode" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+    	</div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1LYhA4VTabfiwrGNZ-RijZ-LTzG0QQnR9" alt="Sexy Mode" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan0.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1MGoJ0w0nW4LsFeHvT9jKoW4RWeirZLXK" alt="Moe Chan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+    	</div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1MFcEzYxkgRlbxT14RJsDPUJmjlTqU7-O" alt="Moe Chan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+           </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1CsiBAhlFFpZopDAVpXR_tMV34_WMCkg2" alt="My Ego" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan0.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+		</div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1M9u7CXD_TznoBMPirHlIvrOGmh2sabBX" alt="Moe Chan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1LXSyX9Wpqteca5dM_2W4J0AG3xwHLYvy" alt="Sexy Mode" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan0.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1KHfoHrj8dmdhYjbtig-J2EI3CXVx_Phg" alt="ElChan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1LU_K5JLhvCcCab5ia5Uv9bacJ9IqmrOU" alt="Sexy Mode" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan0.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1KHERFXbD7ikexqn4JDTOLdyh3xU8Cy-6" alt="ElChan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1LOMvGes_67I_NtzO2u5UIsx7dIGiySCS" alt="Sexy Mode" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan0.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1KGU5xJsCBR0uajHG_UL_fA0WEX0B-sej" alt="ElChan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1KFt-nt-4Cj66EkYxUAydzqbKSIZZj_rQ" alt="ElChan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1LN6Abg2TEnBxAnyKLVO30-VfEByE9NSU" alt="Sexy Mode" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan0.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1LEfvq_uR3M0FKBgUUMx0iOoiukFE_-RL" alt="Sexy Mode" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan0.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1KELNHL-KovW_F2hmGjLoxnMOkuUVHpvF" alt="ElChan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1KBxtdJy8t09nFXQa9dKVRxesrqY5E5ux" alt="ElChan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1KA0xMOtJ42DOfcl1gKaNp_sq71zKKhoZ" alt="ElChan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1K6CEMZA4JrO7UQmUNuqBszA5RSuaDuXK" alt="ElChan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1HtXsF59fvwe32uOYguKj7LvXyQu2SlMX" alt="Awww" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span> 
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1K5ZI10ZP81LV4_2roBLEFoPtYgg89wW0" alt="ElChan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1K-zs74HgQV3HBnFqaFDaZ9x4sXSu6S8s" alt="ElChan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1JuHYpEn4yteRb4c3KCLPc2Eav1DY3Mzf" alt="ElChan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1JsaL1ZIuILs29Q5XHYcMXO1leSpcnZo8" alt="ElChan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>		
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1Js2bst8Wt3vMjUtnAMhYjq2kVPF-vMUA" alt="ElChan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1JqK0te1LsRP-q-U5yf-50XgMNelKrxVL" alt="ElChan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1JmxOTEpWH0IuLSWew_WzfeuqL_ULXRNF" alt="ElChan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1JldUPIrCKr3D0-MSm5oXKIe0k7ex9rJA" alt="ElChan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1Jk7_YLqGyLoC7GakLzUnjdxn2JEWEkED" alt="kawai" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1JaO8ratQspykZ05W_sb5pxccK7ETc4to" alt="ElChan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1J_kp9rZL0U7P0onCvvA2saa95Oso2r8R" alt="ElChan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1JR2Fx4ESnOlgoTpRPlVbRloiEWVw6laW" alt="ElChan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1JPabG5dunk1y6CUkSsR4vOKqV-KrV_D5" alt="ElChan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1JGZ6CYGDYu51evLDjdr8wHmlKAzMQ9Cw" alt="ElChan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1JGVWpNeG_wu4LOOPBLpE71IVbQPYBg1_" alt="ElChan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1DMMNHd_sCSKemy49aNLFpYBvhW6JlJiY" alt="ElChan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1J5DsGI5ft5ORFnm37oEfYP_E1QpAzKrJ" alt="ElChan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1IziXL9KU80vTcmgjt-bQFt1yryh-exTW" alt="ElChan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1IwSzfd02JADcid50qMQizlgBBszjvj0O" alt="ElChan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1L9AhH_Ul5RSxXyF_viF66JVWj05E1bfg" alt="Sexy Mode" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan0.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1L8ZJo8oKYz0YkAND13yCEU8B7_r5TnDH" alt="Sexy Mode" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan0.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1L6sXAZXH8WkKb_867DMY-wIrBgllmlRK" alt="Sexy Mode" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan0.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1L6hLxamFHa7OyJR0MF2D4NjD-wEUtHLz" alt="Sexy Mode" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan0.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1M8L7r1hzwi7xbRKs72kDgHwxzgYLxN3w" alt="Moe Chan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1M7Kk4Zt6Ni_tkUi_LG4FdjXGyivZKes_" alt="Moe Chan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1M6AEtAicesYMxzauIO_FJM6nuHzpBNNs" alt="Moe Chan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1M3J0kYsd6xDcFrocZj6Wa7c0GXCeTAax" alt="Moe Chan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1LzAsiglWlaXjfa7EHi1M8QObhwV9pUjo" alt="Pinky Mode" class="gallery-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1LuR8jQzjaJ72B1VrNqrGHP-B3V8wagAm" alt="Pinky Mode" class="gallery-image">
+             <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1LqVgBlkw2ERpdQWKNYqyp6ZkXRhLl3NB" alt="Pinky Mode" class="gallery-image">
+             <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1XfTSJrfxakmm3qzWCxZKi0Ne73Ph1tjH" alt="Pinky Mode" class="gallery-image">
+                <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1Y92mdZXph1YMktx-ix11iYgPM7tn-Y56" alt="Sexy mode" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan0.jpg') }}">
+                <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1XHryXsJm6tVKhU9GxvKRs_ldhPwKbbjR" alt="Sexy mode" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan0.jpg') }}">
+                <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1XDuDxNtYuwklo8M_0HNN-amEJ6Q2g6L2" alt="Sexy mode" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan0.jpg') }}">
+                <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1XC5hDc7FJh5osWBCOJc6LpPPbtT36yWp" alt="Sexy mode" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan0.jpg') }}">
+                <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1X7IVVVsGuX0liuJ-nQwkxI904wXQqXNT" alt="Sexy mode" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan0.jpg') }}">
+                <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1X6-x_VspY63HS3pEhGeq-iWnwH2jiOKr" alt="Sexy mode" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan0.jpg') }}">
+                <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1X4Ngjisw_ZHWCMIdFc6V9g21dwmrmVYL" alt="Sexy mode" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan0.jpg') }}">
+                <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+	               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1LjmkEapPj82VLquR1AOVBaIaJbllSTDJ" alt="Sexy mode" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan0.jpg') }}">
+                <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1X2O_g2OsVy3_ZeF_kGH_GOCF6oMkUUAw" alt="Sexy mode" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan0.jpg') }}">
+                <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1I_xZ5VnSJPqT6bEkx3557QTF6Eh5v8KE" alt="This Elaina" class="gallery-image"  data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1YAI_TZtD_H6Zy-A6F1diLQPDu6IEbnf7" alt="Pinky Mode" class="gallery-image">
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1IT5fsysu3r802vir_a9r7bUg0d7UIRdC" alt="This Elaina" class="gallery-image"  data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1ISrJPmCI4Z_3GXVM4r3svYooQ1k6lzdk" alt="This Elaina" class="gallery-image"  data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1IPfqCLvMPdZXVNFD8ae9ZZ7VHi-LOYgg" alt="This Elaina" class="gallery-image"  data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1IF2VgEj5FP3K3AX0_lIDgKxq4eLG3W6x" alt="This Elaina" class="gallery-image"  data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1I2arpXQcbrzyLMHazU-NBoWRl4yNQIRp" alt="This Elaina" class="gallery-image"  data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1HwM8gCW4a2_TfjhAIcwhRk3jEZu9pH5n" alt="This Elaina" class="gallery-image"  data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1ZZH0q3VkPWIvYUUjqcUYrW6FuY4b27MZ" alt="This Elaina" class="gallery-image"  data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1Y-adkxqy7L9L-M8UK_DVYmALRVpu3mH4" alt="Moe Chan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1ZfQZEj6pZ_majEUCr9r_sh7iYNWyTSer" alt="Moe Chan" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="{{ url_for('static', filename='images/KakoiJanai.jpg') }}" alt="Kakoi" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="{{ url_for('static', filename='images/Eluwu.jpg') }}" alt="Mode Anggun" class="gallery-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="{{ url_for('static', filename='images/Elchan.jpg') }}" alt="Mode Anggun" class="gallery-image">
+                           <span class="heart-icon"><i class="fas fa-heart"></i></span> </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1ZKnOC6TlzlHhCcnBVI1WxbeT1ksGDFor" alt="Mode Ceria" class="gallery-image">
+                          <span class="heart-icon"><i class="fas fa-heart"></i></span>  </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1ZLsgcL5o1cc9wWXzOGCPHIjnkt9qcmPG" alt="Mode Ceria" class="gallery-image">
+                           <span class="heart-icon"><i class="fas fa-heart"></i></span> </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1YPoJrSlq0cNhzB5wijHZw_D0VsePiXej" alt="Mode Galau" class="gallery-image">
+                           <span class="heart-icon"><i class="fas fa-heart"></i></span> </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1ZSn6f3f2MAEupsZCAyiUA-Zj3pOv1GHz" alt="Mode Galau" class="gallery-image">
+                            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1ZVhBd6A6ueGBu7Re7pXxQXt3Um458EYu" alt="Mode Galau" class="gallery-image">
+                <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1ZOeTGveONsqswTNGR4Z6E3ijsmiYq2Vx" alt="Mode Galak" class="gallery-image">
+                <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1ZOHsPD1ZpC33U2gRdXIxwkUzqN5nOtwz" alt="Mode Galak" class="gallery-image">
+               <span class="heart-icon"><i class="fas fa-heart"></i></span> </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1YtsvIGHRajiIBeml1KJjOmUfH3Qy9eIN" alt="PP" class="gallery-image">
+                <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1YkuYQYmPEl_NgomPqfBx0MaMe-Tzk0YT" alt="PP" class="gallery-image">
+                <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1Y_4c6vXc7o3ezju5DugVoXg3shfnPI-8" alt="PP" class="gallery-image">
+                            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1DBvUMvk3feRKHgEMfKogyuJjMF8-kqjo" alt="Mode Ayam" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan0.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1YKZ3GxqBkg9j29vqxkbED_esbZhjI3vK" alt="Mode Janda" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan0.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                </div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1YZln70jMa9iuwjCWtZiLFeRaSnqlqfvC" alt="Pinky Mode" class="gallery-image">
+                            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+               <div class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?sz=w1000&id=1Y_20f4qJTFVHQ_rMVb1NF2tLmNYwoBIu" alt="My Wifu" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+<a href="#" id="backToTopBtn" class="back-to-top">↑</a>
+</div>
+
+					{% endblock %} {# Akhir dari blok konten #}
