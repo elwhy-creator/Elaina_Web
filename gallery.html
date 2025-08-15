@@ -54,13 +54,9 @@
     </header>
 <main class="container">
 
-			<h1 class="gallery-title">Elaina Chan's Image Gallery</h1>
-	    <p class="gallery-p">koleksi gambar-gambar indah dan menarik.</p>
-           <div class="mini-nav-buttons">
-<a href="{{ url_for('elaina_page') }}" class="mini-nav-button"><i class="fas fa-share-from-square"></i>Elaina Collection<i class="fas fa-star-of-david"></i></a>
-<a href="{{ url_for('movies_page') }}" class="mini-nav-button"><i class="fas fa-share-from-square"></i> Go To Movies<i class="fab fa-studiovinari"></i></a></div>
-<a href="{{ url_for('anime_page') }}" class="mini-nav-button"><i class="fas fa-share-from-square"></i> Anime Collection<i class="fab fa-grunt"></i></a></div>
-
+			<h1 class="videos-title">Elaina Chan's Image Gallery</h1>
+	    <p class="videos-p">koleksi gambar-gambar indah dan menarik.</p>
+    
 					<div id="gallery" class="gallery-container">
     					<div class="gallery-grid">
 
@@ -483,15 +479,15 @@
             <span class="heart-icon"><i class="fas fa-heart"></i></span>
                 </div>
                <div class="gallery-item">
-            <img src="{{ url_for('static', filename='images/KakoiJanai.jpg') }}" alt="Kakoi" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
+            <img src="static/images/KakoiJanai.jpg" alt="Kakoi" class="gallery-image" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}">
             <span class="heart-icon"><i class="fas fa-heart"></i></span>
                 </div>
                <div class="gallery-item">
-            <img src="{{ url_for('static', filename='images/Eluwu.jpg') }}" alt="Mode Anggun" class="gallery-image">
+            <img src="static/images/Eluwu.jpg" alt="Mode Anggun" class="gallery-image">
             <span class="heart-icon"><i class="fas fa-heart"></i></span>
                 </div>
                <div class="gallery-item">
-            <img src="{{ url_for('static', filename='images/Elchan.jpg') }}" alt="Mode Anggun" class="gallery-image">
+            <img src="static/images/Elchan.jpg" alt="Mode Anggun" class="gallery-image">
                            <span class="heart-icon"><i class="fas fa-heart"></i></span> </div>
                <div class="gallery-item">
             <img src="https://drive.google.com/thumbnail?sz=w1000&id=1ZKnOC6TlzlHhCcnBVI1WxbeT1ksGDFor" alt="Mode Ceria" class="gallery-image">
