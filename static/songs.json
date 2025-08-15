@@ -1,24 +1,60 @@
 {
   "anime_songs": [
     {
-      "poster": "static/images/poster/Idol_poster.jpg",
+      "poster": "static/images/poster/literature_poster.jpg",
+      "title": "Literature",
+      "artist": "Reina Ueda",
+      "src": "static/music/anime-songs/Reina Ueda-Literature.mp3"
+    },
+    {
+      "poster": "static/images/poster/idol_poster.jpg",
       "title": "Idol",
       "artist": "Yoasobi",
-      "src": "static/music/anime_songs/YOASOBI-Idol.mp3"
+      "src": "static/music/anime-songs/YOASOBI-Idol.mp3"
     },
     {
       "poster": "static/images/poster/sunny_poster.jpg",
       "title": "Sunny",
       "artist": "Yorushika",
       "src": "static/music/anime-songs/Yorushika-Sunny.mp3"
+    },
+    {
+      "poster": "static/images/poster/koinouta_poster.jpg",
+      "title": "Koino Uta",
+      "artist": "Unknown",
+      "src": "static/music/anime-songs/Koino_Uta.mp3"
+    },
+    {
+      "poster": "static/images/poster/hikigane_poster.jpg",
+      "title": "Hikigane",
+      "artist": "Goodbye Setsuna",
+      "src": "static/music/anime-songs/Goodbyee Setsuna-Hikigane.mp3"
+    },
+    {
+      "poster": "static/images/poster/Bang_Bang_Born_poster.jpg",
+      "title": "Bling Bang",
+      "artist": "Creepy Nuts",
+      "src": "static/music/anime-songs/Creepy Nuts-Bang Bang Born.mp3"
+    },
+    {
+      "poster": "static/images/poster/nezuko_no_uta_poster.jpg",
+      "title": "Nezuko No Uta",
+      "artist": "Nami Nakagawa",
+      "src": "static/music/anime-songs/Go Shina-Nezuko No uta.mp3"
+    },
+    {
+      "poster": "static/images/poster/tanjiro_no_uta_poster.jpg",
+      "title": "Tanjiro No Uta",
+      "artist": "Nami Nakagawa",
+      "src": "static/music/anime-songs/Nami Nakagawa-Tanjiro No Uta.mp3"
     }
   ],
   "mixed_album_songs": [
     {
-      "poster": "static/images/poster/goodknows_poster.jpg",
-      "title": "Goodknows",
+      "poster": "static/images/poster/godknows_poster.jpg",
+      "title": "Godknows",
       "artist": "Aya Hirano",
-      "src": "static/music/mixed-album/Aya Hirano-Goodknows.mp3"
+      "src": "static/music/anime-songs/Aya Hirano-Godknows.mp3"
     }
   ]
 }
