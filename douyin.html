@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elaina Web</title>
+    <link rel="icon" type="image/x-icon" href="static/images/KawaiEl.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="static/elaina.css">
+</head>
+<body id="body" class="drak-mode"> <header>
+        <div class="header-container">
+            <a href="#" class="logo"><i class="fas fa-hat-wizard"></i> ZONA ELAINA <i class="fas fa-star"></i></a>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html" class="{% if request.endpoint == 'home' %}active{% endif %}">Home</a></li>
+                    <li><a href="anime.html" class="{% if request.endpoint == 'anime.html' %}active{% endif %}">Anime</a></li>
+                    <li><a href="shorts.html" class="{% if request.endpoint == 'shorts.html' %}active{% endif %}">Shorts</a></li>
+                    <li><a href="elaina.html" class="{% if request.endpoint == 'elaina.html' %}active{% endif %}">Elaina</a></li>
+                    <li><a href="gallery.html" class="{% if request.endpoint == 'gallery.html' %}active{% endif %}">Gallery</a></li>
+                    <li><a href="movies.html" class="{% if request.endpoint == 'movies.html' %}active{% endif %}">Movies</a></li>
+                    <li><a href="contact.html" class="{% if request.endpoint == 'contact.html' %}active{% endif %}">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <i class="fa fa-adjust" aria-hidden="true"></i>
+                </button>
+                <a href="Ayo chat di WhatsApp, aplikasi yang cepat, sederhana, dan aman untuk berkirim pesan dan menelepon secara gratis. Dapatkan di https://wa.me/dl" target="_blank" class="whatsapp-button">
+                   <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <button class="menu-toggle" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+                <div id="imageModal" class="image-modal-overlay">
+                 <div class="image-modal-content">
+                 <span class="image-close-button">&times;</span>
+                 <img class="image-modal-body" id="fullImage" alt="What Hapend">
+                 <div class="image-modal-caption" id="imageCaption"></div>
+                 <div id="loader" class="loader"></div>
+                 <div class="related-images">
+                 <a id="modal-link" href="#"><i class="fas fa-share-from-square"></i>Gambar Lainya</a>
+                 <div class="related-images-container">
+             </div>
+          </div>
+       </div>
+    </header>
+<main class="container">
+
+			    <section class="elaina-image-section">
+                                <h2 class="section-title">Douyin  Elaina Chan</h2>
+     					<div id="douyin" class="elaina-image-grid">
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/bglx09ungyjgd22ytfsl6/01_001.webp?rlkey=ztbx1mgtjv0h1ahzj0wer34dj&st=r0ntdcgu&dl=1" alt="Cerita 1" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/g87yz00g6dtrway8ivcdh/02_002.webp?rlkey=oisr3py9be3gyu1tmro5or4nu&st=8smxne20&dl=1" alt="Cerita 2" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/jvhp25sqooc90xl098h26/03_003.webp?rlkey=szyehjvki3r3cgbel26ry5tpu&st=01w38gxy&dl=1" alt="Cerita 3" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/ux7qau88yvlgmbvgq589g/04_004.webp?rlkey=em9jjqh9bvrjvraxzewtezu2r&st=i1i2suh5&dl=1" alt="Cerita 4" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/2i9n1om1kx1rppxsyy42g/05_005.webp?rlkey=c4rr11htguja151qpwbacptcp&st=q413o2aj&dl=1" alt="Cerita 5" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/3hkg8f2nvrbx9ggobocaa/06_006.webp?rlkey=lru5ocuwagxh0farryjwtksze&st=kxl2axuf&dl=1" alt="Cerita 6" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/4eqo0yk2i936btqtd2gze/07_007.webp?rlkey=0slkyx3bui5aw4s6vic79gmk8&st=kfsjcio1&dl=1" alt="Cerita 7" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/hg9zcyocts4n0k2piiogx/08_008.webp?rlkey=nmqakpn0wzqlxibx44ybpczte&st=autz1fhq&dl=1" alt="Cerita 8" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/l5p6qn757u8ft9cqvzd8r/09_009.webp?rlkey=00u01gazqu6mfhr5nvumc9vgd&st=lnv5gosu&dl=1" alt="Cerita 9" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/2fr4o9tpmsx3yeizkkcet/10_010.webp?rlkey=ilob4589mkt4y017bmsd95qy0&st=4cs27u9p&dl=1" alt="Cerita 10" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/tdmx8fk2dlmt8ic1g0ddx/11_011.webp?rlkey=yd2320dekk0syf2z91p5uaj94&st=sben4peq&dl=1" alt="Cerita 11" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/pedcjiixf35qt8efxcorr/12_012.webp?rlkey=skqxdfoxdbiblnx6feu257ivw&st=5o87xdbn&dl=1" alt="Cerita 12" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/ev1f47nyfjav3qj7zmjmb/13_013.webp?rlkey=hi8sh98c1rx4b6lqkci25mw3f&st=njsd5xq6&dl=1" alt="Cerita 13" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/kg81xzer3pp41j9sylyts/14_014.webp?rlkey=c2pn57l9kdt5gp6ma9znvdumf&st=z80pl2tz&dl=1" alt="Cerita 14" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/je23vdd2gb1cicroogyso/15_015.webp?rlkey=bp2i723tzie2zbmgdxt5wztjo&st=s1spsot6&dl=1" alt="Cerita 15" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/uv04a7gllrrn4fgikzjcv/16_016.webp?rlkey=aoibtzxryshfvkg2he7imdpvf&st=rq4cham5&dl=1" alt="Cerita 16" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/2keyp4ikztykzxkb6pyuj/17_017.webp?rlkey=y2ity27y2fmt8sk0m0770dk2a&st=yc117ixb&dl=1" alt="Cerita 17" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/ik0tpk77ldhmpkrlp8uzv/18_018.webp?rlkey=9z5c8do1cc3gkedbklx8jeawg&st=gzjn44qw&dl=1" alt="Cerita 18" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/bi6cgy4ulr43a1vvunkdi/19_019.webp?rlkey=7awic9ul5rwu07p1i19eqvu0o&st=4l9c0m29&dl=1" alt="Cerita 19" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/qq8m1fv3imtwmstcnvr71/20_020.webp?rlkey=1uahejhe9za1ric5yibt3ub51&st=qw7u0x00&dl=1" alt="Cerita 20" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/4bv1l899hvqfqe2wki5o3/21_021.webp?rlkey=pgkngldcjoaqoucuu4q4lw7bn&st=yn8r8s93&dl=1" alt="Cerita 21" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/2bt4s2t4dao0slurnefu0/22_022.webp?rlkey=qvoeigwhfwudn35zyilt6z9fu&st=61ty1iuk&dl=1" alt="Cerita 22" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/6q99jrc5zrgv4lffxaw77/23_023.webp?rlkey=kkjzmzdudfz9dmnqlz2ni72d5&st=b6i7i3uj&dl=1" alt="Cerita 23" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+    
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/d2vbr99u6kkgs4b3hltml/24_024.webp?rlkey=resb59ynnjvdb5hekroi6wv4f&st=38vggrc0&dl=1" alt="Cerita 24" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/t21hqfd7ikhsxuqpvdciw/25_025.webp?rlkey=i56zllf000qm1rq0i3zviz9p0&st=yyxem7by&dl=1" alt="Cerita 25" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/c9ze9lyumak0ymtj6tite/26_026.webp?rlkey=bxvp4dv9bjro0m62yozoid33c&st=ivhdgr6d&dl=1" alt="Cerita 26" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/22qeis1m0plu83bwivluy/27_027.webp?rlkey=eklh6w5dfwk11csazgeh36gco&st=f8uuepix&dl=1" alt="Cerita 27" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/iwv6hu13r5znioml8u9am/28_028.webp?rlkey=pyxc3ulcqmp8pzdsrjelczdaf&st=w4hn39wc&dl=1" alt="Cerita 28" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/vfxk19k8dbw47gf31syyn/29_029.webp?rlkey=1yq5glmie6jpqtv2wfl6dh190&st=40405u6k&dl=1" alt="Cerita 29" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/eyk9qheiubbk8wt4t8h1j/30_030.webp?rlkey=dxso7dqc9tm2o3sv8ls5dyfro&st=mbwt03zg&dl=1" alt="Cerita 30" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/6g5ln9rhbhmkpeyfa80h2/31_031.webp?rlkey=liv9l43jb85l6oedjkihvrwxq&st=y9795bew&dl=1" alt="Cerita 31" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/gjzptx0ivs2ujhmrybukd/32_032.webp?rlkey=vm7h2j4ne13m0lgqu8ce1ynt6&st=vd11zkte&dl=1" alt="Cerita 32" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+           <div class="elaina-item-img" data-category="douyin">
+            <img src="https://www.dropbox.com/scl/fi/5gg1tsb5dgoovs5kvl0vy/33_033.webp?rlkey=dajyqvinq52plvy8qtglckmhy&st=y7vzdq0p&dl=1" alt="End" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div></section>
+<div class="nav-button">
+<a href="index.html" class="nav-button"><i class="fas fa-share-from-square"></i> Anime Collection<i class="fab fa-grunt"></i></a></div>
+<div class="filter-buttons">
+<a href="#" id="backToTopBtn" class="back-to-top">⬆️  </a></div>
+</main>
+                            <footer>
+        <div class="footer-links">
+    <a href="#" class="nav-button"><i class="fab fa-facebook-f"></i> Facebook</a>
+    <a href="#" class="nav-button"><i class="fab fa-pinterest-p"></i> Pinterest</a>
+    <a href="https://www.instagram.com/elaina.chan09?igsh=MXRraGwwNXVqazF6Yg==" target="_blank" class="nav-button"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="#" class="nav-button"><i class="fab fa-twitter"></i> Twiter</a>
+    <a href="#" class="nav-button"><i class="fab fa-youtube"></i> Youtube</a>
+    </div>
+
+        <p class="copyright-text">
+            &copy; 2025 ZONA ELAINA.
+            <br>
+            <a href="https://www.instagram.com/elaina.chan09?igsh=MXRraGwwNXVqazF6Yg==" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> |
+            <a href="https://t.me/Halo, Saya pakai Telegram untuk chat. Ayo ikutan, unduh di sini: https://telegram.org/dl" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
+        </p>
+    </footer>
+
+    <script src="static/js/script.js"></script>
+    <script src="static/js/icon.js"></script>
+    <script src="static/js/modal.js"></script>
+    <script src="static/js/movies.js"></script>
+    <script src="static/js/gallery.js"></script>
+    <script src="static/js/songs.js"></script>
+    </script>
+</body>
+</html>
