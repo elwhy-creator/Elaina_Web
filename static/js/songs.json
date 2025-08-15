@@ -1,0 +1,24 @@
+{
+  "anime_songs": [
+    {
+      "poster": "static/images/poster/Idol_poster.jpg",
+      "title": "Idol",
+      "artist": "Yoasobi",
+      "src": "static/music/anime_songs/YOASOBI-Idol.mp3"
+    },
+    {
+      "poster": "static/images/poster/sunny_poster.jpg",
+      "title": "Sunny",
+      "artist": "Yorushika",
+      "src": "static/music/anime-songs/Yorushika-Sunny.mp3"
+    }
+  ],
+  "mixed_album_songs": [
+    {
+      "poster": "static/images/poster/goodknows_poster.jpg",
+      "title": "Goodknows",
+      "artist": "Aya Hirano",
+      "src": "static/music/mixed-album/Aya Hirano-Goodknows.mp3"
+    }
+  ]
+}
