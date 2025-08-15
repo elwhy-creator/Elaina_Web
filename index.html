@@ -15,7 +15,7 @@
 </head>
 <body id="body" class="drak-mode"> <header>
         <div class="header-container">
-            <a href="{{ url_for('index') }}" class="logo"><i class="fas fa-hat-wizard"></i> ZONA ELAINA <i class="fas fa-star"></i></a>
+            <a href="/" class="logo"><i class="fas fa-hat-wizard"></i> ZONA ELAINA <i class="fas fa-star"></i></a>
             <nav class="header-nav">
                 <ul>
                     <li><a href="{{ url_for('index') }}" class="{% if request.endpoint == 'home' %}active{% endif %}">Home</a></li>
@@ -58,7 +58,7 @@
 
 <div id="home" class="home-container">
 <div class="profile-section">
-<img src="{{ url_for('static', filename='images/kekasihku.jpg') }}" alt="Elaina Chan" class="profile-picture">
+<img src="static/images/kekasihku.jpg" alt="Elaina Chan" class="profile-picture">
 <h1 class="profile-name">FROM ME, TO ME!</h1>
 <p class="profile-bio">Welcome To My World!</p>
 </div>
@@ -67,7 +67,7 @@
 <h3> <i class="fas fa-music"></i> My Playlist Music <i class="fas fa-music"></i></h3>
 
         <div class="playlist-item" onclick="toggleSongs('playlist1')">
-     <img src="{{ url_for('static', filename='elaina.pc/casual17.jpg') }}" alt="Anime Songs" class="playlist-thumbnail">
+     <img src="static/elaina.pc/casual17.jpg" alt="Anime Songs" class="playlist-thumbnail">
       <p class="playlist-title">Anime Songs</p></div>
 
     <ul id="playlist1" class="song-list">
@@ -85,7 +85,7 @@
     {% endfor %}
     </ul>
      <div class="playlist-item" onclick="toggleSongs('playlist2')">
-     <img src="{{ url_for('static', filename='elaina.pc/casual47.jpeg') }}" alt="Mixed" class="playlist-thumbnail">
+     <img src="static/elaina.pc/casual47.jpeg" alt="Mixed" class="playlist-thumbnail">
       <p class="playlist-title">Mixed Album</p></div>
 
     <ul id="playlist2" class="song-list">
@@ -106,23 +106,48 @@
 </div>
 <div class="thumbnail-gallery">
    <a href="picture" class="pickme">
-     <img src="{{ url_for('static', filename='elaina.pc/001.jpg') }}" alt="Kawaiii" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}" data-link="elaina"></a>
+     <img src="static/elaina.pc/001.jpg" alt="Kawaiii" data-full="static/elaina.pc/001.jpg" data-link="elaina"></a>
    <a href="manga" class="pickme">
-      <img src="{{ url_for('static', filename='elaina.pc/manga/manga.jpeg') }}" alt="Manga" data-full="{{ url_for('static', filename='elaina.pc/manga/manga.jpeg') }}" data-link="anime"></a>
+      <img src="static/elaina.pc/manga/manga.jpeg" alt="Manga" data-full="static/elaina.pc/manga/manga.jpeg" data-link="anime"></a>
    <a href="douyin" class="pickme">
-      <img src="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}" alt="Yang Manis Manis" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}" data-link="shorts"></a>
+      <img src="static/elaina.pc/onichan1.jpg" alt="Yang Manis Manis" data-full="static/elaina.pc/onichan1.jpg" data-link="shorts"></a>
    <a href="whitch" class="pickme">
-      <img src="{{ url_for('static', filename='elaina.pc/kawai3.jpg') }}" alt="Cuteee" data-full="{{ url_for('static', filename='elaina.pc/001.jpg') }}" data-link="movies"></a>
-   <a href="elaina" class="pickme">
-      <img src="{{ url_for('static', filename='elaina.pc/elaina01/elaina1.jpeg') }}" alt="Onichann" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}" data-link="movies#musoku"></a>
+      <img src="static/elaina.pc/kawai3.jpg" alt="Cuteee" data-full="{{ url_for('static', filename='elaina.pc/001.jpg" data-link="movies"></a>
+   <a href="elaina" class="pickme"
+      <img src="static/elaina.pc/elaina01/elaina1.jpeg" alt="Onichann" data-full="static/elaina.pc/onichan1.jpg" data-link="movies#musoku"></a>
    <a href="hentai" class="pickme">
-      <img src="static/elaina.pc/sexy33.jpg" alt="Mommy" data-full="{{ url_for('static', filename='elaina.pc/onichan1.jpg') }}" data-link="elaina#elaina18+"></a>
+      <img src="static/elaina.pc/sexy33.jpg" alt="Mommy" data-full="static/elaina.pc/onichan1.jpg" data-link="elaina#elaina18+"></a>
 
 </div>
 <div class="quick-links-home">
-    <a href="{{ url_for('anime_page') }}" class="home-quick-button"><i class="fas fa-play-circle"></i> Anime Collection</a>
-    <a href="{{ url_for('gallery_page') }}" class="home-quick-button"><i class="fas fa-images"></i> Gallery Collection</a>
+    <a href="templates/anime.html" class="home-quick-button"><i class="fas fa-play-circle"></i> Anime Collection</a>
+    <a href="templates/gallery.html" class="home-quick-button"><i class="fas fa-images"></i> Gallery Collection</a>
 </div>
 </div>
 </main>
-		</body> </html>
+			    <footer>
+        <div class="footer-links">
+    <a href="#" class="nav-button"><i class="fab fa-facebook-f"></i> Facebook</a>
+    <a href="#" class="nav-button"><i class="fab fa-pinterest-p"></i> Pinterest</a>
+    <a href="https://www.instagram.com/elaina.chan09?igsh=MXRraGwwNXVqazF6Yg==" target="_blank" class="nav-button"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="#" class="nav-button"><i class="fab fa-twitter"></i> Twiter</a>
+    <a href="#" class="nav-button"><i class="fab fa-youtube"></i> Youtube</a>
+    </div>
+
+        <p class="copyright-text">
+            &copy; 2025 ZONA ELAINA.
+            <br>
+            <a href="https://www.instagram.com/elaina.chan09?igsh=MXRraGwwNXVqazF6Yg==" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> |
+            <a href="https://t.me/Halo, Saya pakai Telegram untuk chat. Ayo ikutan, unduh di sini: https://telegram.org/dl" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
+        </p>
+    </footer>
+
+    <script src="static/js/script.js"></script>
+    <script src="static/js/icon.js"></script>
+    <script src="static/js/modal.js"></script>
+    <script src="static/js/movies.js"></script>
+    <script src="static/js/gallery.js"></script>
+    </script>
+</body>
+</html>
+
