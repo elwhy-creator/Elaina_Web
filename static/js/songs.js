@@ -1,5 +1,5 @@
 // Dapatkan data dari file JSON
-fetch('songs.json')
+fetch('static/songs.json')
   .then(response => response.json())
   .then(data => {
     // Ambil daftar lagu anime
