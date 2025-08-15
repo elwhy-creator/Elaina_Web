@@ -1,8 +1,57 @@
-{% extends 'base.html' %} {# WAJIB: Mewarisi dari base.html #}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Elaina Web{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/Kawai3.jpg') }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-{% block title %}Home - Elaina Chan{% endblock %} {# Judul unik untuk halaman ini #}
-
-{% block content %} {# Blok konten untuk halaman ini #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='elaina.css') }}">
+</head>
+<body id="body" class="drak-mode"> <header>
+        <div class="header-container">
+            <a href="{{ url_for('index') }}" class="logo"><i class="fas fa-hat-wizard"></i> ZONA ELAINA <i class="fas fa-star"></i></a>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="{{ url_for('index') }}" class="{% if request.endpoint == 'home' %}active{% endif %}">Home</a></li>
+                    <li><a href="{{ url_for('anime_page') }}" class="{% if request.endpoint == 'anime_page' %}active{% endif %}">Anime</a></li>
+                    <li><a href="{{ url_for('shorts_page') }}" class="{% if request.endpoint == 'shorts_page' %}active{% endif %}">Shorts</a></li>
+                    <li><a href="{{ url_for('elaina_page') }}" class="{% if request.endpoint == 'elaina_page' %}active{% endif %}">Elaina</a></li>
+                    <li><a href="{{ url_for('gallery_page') }}" class="{% if request.endpoint == 'gallery_page' %}active{% endif %}">Gallery</a></li>
+                    <li><a href="{{ url_for('movies_page') }}" class="{% if request.endpoint == 'movies_page' %}active{% endif %}">Movies</a></li>
+                    <li><a href="{{ url_for('contact_page') }}" class="{% if request.endpoint == 'contact_page' %}active{% endif %}">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <i class="fa fa-adjust" aria-hidden="true"></i>
+                </button>
+                <a href="https://wa.me/085707357830" target="_blank" class="whatsapp-button">
+		   <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <button class="menu-toggle" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+		<div id="imageModal" class="image-modal-overlay">
+                 <div class="image-modal-content">
+                 <span class="image-close-button">&times;</span>
+                 <img class="image-modal-body" id="fullImage" alt="What Hapend">
+                 <div class="image-modal-caption" id="imageCaption"></div>
+                 <div id="loader" class="loader"></div>
+		 <div class="related-images">
+		 <a id="modal-link" href="#"><i class="fas fa-share-from-square"></i>Gambar Lainya</a>
+                 <div class="related-images-container">
+             </div>
+          </div>
+       </div>
+    </header>
+<main>
 <script async src="https://cse.google.com/cse.js?cx=70cb7293df6864d90">
 </script>
 <div class="gcse-search"></div>
@@ -75,4 +124,6 @@
     <a href="{{ url_for('gallery_page') }}" class="home-quick-button"><i class="fas fa-images"></i> Gallery Collection</a>
 </div>
 </div>
-{% endblock %} {# Akhir dari blok konten #}
+</main>
+                </bod>
+                </html>
