@@ -71,36 +71,13 @@
       <p class="playlist-title">Anime Songs</p></div>
 
     <ul id="playlist1" class="song-list">
-    {% for song in anime_songs %}
-        <li>
-            <img src="{{ song.poster }}" class="song-thumbnail" alt="Poster">
-            <div class="song-info">
-                <p class="song-title">{{ song.title }}</p>
-                <p class="song-artist">{{ song.artist }}</p>
-            </div>
-            <audio class="song" controls preload="none">
-                <source src="{{ song.src }}" type="audio/mpeg">
-            </audio>
-        </li>
-    {% endfor %}
     </ul>
+	
      <div class="playlist-item" onclick="toggleSongs('playlist2')">
      <img src="static/elaina.pc/casual47.jpeg" alt="Mixed" class="playlist-thumbnail">
       <p class="playlist-title">Mixed Album</p></div>
 
     <ul id="playlist2" class="song-list">
-    {% for song in mixed_album_songs %}
-        <li>
-            <img src="{{ song.poster }}" class="song-thumbnail" alt="Poster">
-            <div class="song-info">
-                <p class="song-title">{{ song.title }}</p>
-                <p class="song-artist">{{ song.artist }}</p>
-            </div>
-            <audio class="song" controls preload="none">
-                <source src="{{ song.src }}" type="audio/mpeg">
-            </audio>
-        </li>
-    {% endfor %}
     </ul>
 
 </div>
