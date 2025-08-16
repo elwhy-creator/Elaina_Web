@@ -954,30 +954,37 @@ footer {
 	grid-template-columns: 1fr;
     }
 }
+
 @media (max-width: 480px) {
-    /* Persempit header untuk ponsel */
+    /* Atur header agar menggunakan flexbox */
     .header {
-        padding: 0.5rem; /* Kurangi padding untuk menghemat ruang */
-        height: auto; /* Izinkan tinggi menyesuaikan konten */
+        display: flex;
+        align-items: center; /* Sejajarkan secara vertikal */
+        justify-content: space-between; /* Beri ruang di antara elemen */
+        padding: 0.5rem;
     }
-	.header-nav {
-		margin-top: 0.5rem; }
 
     /* Perkecil logo agar tidak terlalu besar */
-    .logo {
-        height: 20px; /* Contoh tinggi yang lebih kecil */
+    .logo img {
+        height: 40px;
         width: auto;
     }
-    /* Atur ulang tata letak menu dan aksi */
+
+    /* Atur ulang elemen-elemen di dalam header */
     .header-actions {
-        order: 2; /* Pindahkan kembali ke belakang jika diperlukan */
+        order: 2;
         display: flex;
         align-items: center;
         gap: 0.5rem;
     }
 
     .menu-toggle {
-        font-size: 1.5rem; /* Perkecil tombol menu */
+        font-size: 1.5rem;
+    }
+    
+    .logo {
+        flex-grow: 1; /* Biarkan logo mengambil ruang yang tersisa */
+        text-align: center;
     }
 
     /* Sembunyikan nama situs jika terlalu panjang */
@@ -985,9 +992,38 @@ footer {
         display: none;
     }
 
-    /* Ubah ukuran font di seluruh header */
-    .header-nav a {
-        font-size: 0.5rem;
+    /* Aturan umum untuk tampilan seluler */
+    body {
+        padding: 0;
+    }
+
+    /* Pastikan semua gambar tidak meluber */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Sesuaikan kontainer utama */
+    .main-content {
+        padding: 1rem;
+    }
+
+    /* Jadikan semua bagian konten menjadi satu kolom */
+    .section, .container {
+        padding: 1rem 0.5rem;
+    }
+
+    /* Sesuaikan daftar putar */
+    .playlist li {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .song-thumbnail {
+        width: 100%;
+        height: auto;
     }
 }
 
