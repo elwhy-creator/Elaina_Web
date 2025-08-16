@@ -881,7 +881,7 @@ footer {
     box-shadow: none !important;
 }
 .gs-webResult .gs-snippet, .gs-fileFormatType {
-    color: var(--text-color);
+    color: var(--text-color) !important;
 }
 .section-title {
     border-bottom: 2px solid var(--border-color);
