@@ -282,6 +282,9 @@ header {
 
 .song {
     width: 300px;
+	background-color: var(--background-color);
+	border-radius: 10px;
+	border: 1px solid var(--border-color);
 
 }
 .thumbnail-gallery {
