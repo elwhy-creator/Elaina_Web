@@ -43,3 +43,23 @@ fetch('static/songs.json')
       mixedSongList.appendChild(listItem);
     });
   });
+
+    var songs = document.getElementsByClassName('song');
+
+    for (var i = 0; i < songs.length; i++) {
+        songs[i].addEventListener('ended', function() {
+            var currentSongIndex = -1;
+            for (var j = 0; j < songs.length; j++) {
+                if (songs[j] === this) {
+                    currentSongIndex = j;
+                    break;
+                }
+            }
+            var nextSongIndex = currentSongIndex + 1;
+            if (nextSongIndex < songs.length) {
+                songs[nextSongIndex].play();
+            } else {
+                songs[0].play();
+            }
+        });
+    }
