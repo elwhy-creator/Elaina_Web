@@ -56,26 +56,6 @@ function toggleSongs(playlistId) {
         playlist.style.display = "block";
     }
 }
-    // === FUNGSI PLAYLIST DAN LAGU ===
-    var songs = document.getElementsByClassName('song');
-
-    for (var i = 0; i < songs.length; i++) {
-        songs[i].addEventListener('ended', function() {
-            var currentSongIndex = -1;
-            for (var j = 0; j < songs.length; j++) {
-                if (songs[j] === this) {
-                    currentSongIndex = j;
-                    break;
-                }
-            }
-            var nextSongIndex = currentSongIndex + 1;
-            if (nextSongIndex < songs.length) {
-                songs[nextSongIndex].play();
-            } else {
-                songs[0].play();
-            }
-        });
-    }
 // Tambahkan di file script.js kamu
 function changeCssVariable(variableName, value) {
     document.documentElement.style.setProperty(variableName, value);
