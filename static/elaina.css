@@ -960,9 +960,11 @@ footer {
         padding: 0.5rem; /* Kurangi padding untuk menghemat ruang */
         height: auto; /* Izinkan tinggi menyesuaikan konten */
     }
+	.header-nav {
+		margin-top: 0.5rem; }
 
     /* Perkecil logo agar tidak terlalu besar */
-    .logo  {
+    .logo img {
         height: 20px; /* Contoh tinggi yang lebih kecil */
         width: auto;
     }
