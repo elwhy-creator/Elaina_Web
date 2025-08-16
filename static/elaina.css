@@ -954,3 +954,14 @@ footer {
 	grid-template-columns: 1fr;
     }
 }
+@media (max-width: 600px) {
+  /* Di dalam sini, tambahkan kode CSS yang hanya berlaku untuk layar ponsel */
+  .container {
+    padding: 10px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+}
+
