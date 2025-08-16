@@ -420,12 +420,7 @@ header {
 
 .movies-container, .shorts-container, .gallery-container, .elaina-videos-section, .elaina-image-section, .video-section {
     margin-bottom: 2rem;
-}
 
-.section-title {
-    text-align: center;
-    margin-bottom: 1.5rem;
-	color: var(--text-color);
 }
 
 .movie-video-grid, .movie-image-grid, .shorts-grid, .gallery-grid, .elaina-videos-grid, .elaina-image-grid,
@@ -891,10 +886,10 @@ footer {
 .section-title {
     border-bottom: 2px solid var(--border-color);
     padding-bottom: 12px;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
     font-size: 2em;
     text-align: left;
-    color: var(--text-dark);
+    color: var(--text-color);
     transition: border-color 0.4s ease, color 0.4s ease;
 }
 /* =========================================================================
