@@ -954,14 +954,40 @@ footer {
 	grid-template-columns: 1fr;
     }
 }
-@media (max-width: 600px) {
-  /* Di dalam sini, tambahkan kode CSS yang hanya berlaku untuk layar ponsel */
-  .container {
-    padding: 10px;
-  }
+@media (max-width: 480px) {
+    /* Persempit header untuk ponsel */
+    .header {
+        padding: 0.5rem; /* Kurangi padding untuk menghemat ruang */
+        height: auto; /* Izinkan tinggi menyesuaikan konten */
+    }
 
-  .logo {
-    font-size: 24px;
-  }
+    /* Perkecil logo agar tidak terlalu besar */
+    .logo  {
+        height: 20px; /* Contoh tinggi yang lebih kecil */
+        width: auto;
+    }
+
+    /* Atur ulang tata letak menu dan aksi */
+    .header-actions {
+        order: 2; /* Pindahkan kembali ke belakang jika diperlukan */
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .menu-toggle {
+        font-size: 1.5rem; /* Perkecil tombol menu */
+    }
+
+    /* Sembunyikan nama situs jika terlalu panjang */
+    .logo span {
+        display: none;
+    }
+
+    /* Ubah ukuran font di seluruh header */
+    .header * {
+        font-size: 0.9rem;
+    }
 }
+
 
