@@ -12,12 +12,11 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="static/elaina.css">
-	<input type="text" id="search-input" placeholder="Search...">
 
 </head>
 <body id="body" class="drak-mode"> <header>
         <div class="header-container">
-            <a href="#" class="logo"><i class="fas fa-hat-wizard"></i> ZONA ELAINA <i class="fas fa-star"></i></a>
+            <a href="index.html" class="logo"><i class="fas fa-hat-wizard"></i> ZONA ELAINA <i class="fas fa-star"></i></a>
             <nav class="header-nav">
                 <ul>
                     <li><a href="index.html" class="{% if request.endpoint == 'home' %}active{% endif %}">Home</a></li>
@@ -27,6 +26,7 @@
                     <li><a href="gallery.html" class="{% if request.endpoint == 'gallery.html' %}active{% endif %}">Gallery</a></li>
                     <li><a href="movies.html" class="{% if request.endpoint == 'movies.html' %}active{% endif %}">Movies</a></li>
                     <li><a href="contact.html" class="{% if request.endpoint == 'contact.html' %}active{% endif %}">Contact</a></li>
+					<input type="text" id="search-input" placeholder="Search...">
                 </ul>
             </nav>
             <div class="header-actions">
