@@ -19,7 +19,31 @@
       "src": "static/music/anime-songs/Yorushika-Sunny.mp3"
     },
     {
-      "poster": "static/images/poster/koinouta_poster.jpg",
+      "poster": "static/images/poster/martian_poster.jpg",
+      "title": "Martian",
+      "artist": "Yorushika",
+      "src": "static/music/anime-songs/Yorushika-Martian.mp3"
+    },
+    {
+      "poster": "static/images/poster/stay_alive_poster.jpg",
+      "title": "Stay Alive",
+      "artist": "Unknown",
+      "src": "static/music/anime-songs/Stay Alive.mp3"
+    },
+    {
+      "poster": "static/images/poster/suzume_poster.jpg",
+      "title": "Suzume",
+      "artist": "Toaka",
+      "src": "static/music/anime-songs/Toaka-Suzume.mp3"
+    },
+    {
+      "poster": "static/images/poster/tower_of_flower_poster.jpg",
+      "title": "Tower Of Flower",
+      "artist": "Sayuri",
+      "src": "static/music/anime-songs/Sayuri-Tower Of Flower.mp3"
+    },
+    {
+      "poster": "static/images/poster/koino_uta_poster.jpg",
       "title": "Koino Uta",
       "artist": "Unknown",
       "src": "static/music/anime-songs/Koino_Uta.mp3"
@@ -43,18 +67,96 @@
       "src": "static/music/anime-songs/Go Shina-Nezuko No uta.mp3"
     },
     {
+      "poster": "static/images/poster/Lost_In_Paradise_poster.jpg",
+      "title": "Lost In Paradise",
+      "artist": "Ali Feat Aklo",
+      "src": "static/music/anime-songs/Ali feat Aklo- Lost In Paradise.mp3"
+    },
+    {
       "poster": "static/images/poster/tanjiro_no_uta_poster.jpg",
       "title": "Tanjiro No Uta",
       "artist": "Nami Nakagawa",
       "src": "static/music/anime-songs/Nami Nakagawa-Tanjiro No Uta.mp3"
-    }
-  ],
-  "mixed_album_songs": [
+    },
+    {
+      "poster": "static/images/poster/gurenge_poster.jpg",
+      "title": "Gurenge",
+      "artist": "LISA",
+      "src": "static/music/anime-songs/LISA-Gurenge.mp3"
+    },
+    {
+      "poster": "static/images/poster/styx_helix_poster.jpg",
+      "title": "STYX HELIX",
+      "artist": "MYTH & ROID",
+      "src": "static/music/anime-songs/MYTH & ROID-STYX_HELIX.mp3"
+    },
+    {
+      "poster": "static/images/poster/paradoxum_poster.jpg",
+      "title": "Paradoxum",
+      "artist": "MYTH & ROID",
+      "src": "static/music/anime-songs/MYTH & ROID-Paradoxum.mp3"
+    },
+    {
+      "poster": "static/images/poster/Shine_in_the_Cruel_Night_poster.jpg",
+      "title": "Shine in the Cruel Night",
+      "artist": "LISA",
+      "src": "static/music/anime-songs/LISA-Shine in the Cruel Night.mp3"
+    },
     {
       "poster": "static/images/poster/godknows_poster.jpg",
       "title": "Godknows",
       "artist": "Aya Hirano",
       "src": "static/music/anime-songs/Aya Hirano-Godknows.mp3"
+    },
+    {
+      "poster": "static/images/poster/bluebird_poster.jpg",
+      "title": "Bluebird",
+      "artist": "Ikimono Gakari",
+      "src": "static/music/anime-songs/Ikimono Gakari-Bluebird.mp3"
+    },
+    {
+      "poster": "static/images/poster/Kanashimi_poster.jpg",
+      "title": "Kanashimi",
+      "artist": "Litle By Litle",
+      "src": "static/music/anime-songs/Litle By Litle-Kanashimi.mp3"
+    },
+    {
+      "poster": "static/images/poster/sasageyo_poster.jpg",
+      "title": "Shinshou Wo Sasageyo",
+      "artist": "Linked Horizon",
+      "src": "static/music/anime-songs/sasageyo.mp3"
+    },
+    {
+      "poster": "static/images/poster/odd_future_poster.jpg",
+      "title": "ODD FUTURE",
+      "artist": "Unknown",
+      "src": "static/music/anime-songs/ODD FUTURE.mp3"
+    },
+    {
+      "poster": "static/images/poster/after_the_dark_poster.jpg",
+      "title": "After The Dark",
+      "artist": "Sweater Weather",
+      "src": "static/music/anime-songs/Sweater Weather-After The Dark.mp3"
+    }
+  ],
+  "mixed_album_songs": [
+    {
+      "poster": "static/images/poster/Sempiternal_poster.jpg",
+      "title": "BMTH",
+      "artist": "Album",
+      "src": "https://drive.google.com/uc?export=download&id=1NyJR_tMR0WkBvOpwp_vRZ0VFtloHCYto"
+    },
+    {
+      "poster": "static/images/poster/A7x_poster.jpg",
+      "title": "A7x",
+      "artist": "Album",
+      "src": "https://drive.google.com/uc?export=download&id=1OsgokvyKZNlOcGHYSwj3JAfQFQiC_I_k"
+    },
+    {
+      "poster": "static/images/poster/Aotthemes4_poster.jpg",
+      "title": "Aot Theme S4",
+      "artist": "Album",
+      "src": "https://drive.google.com/uc?export=download&id=1TA8vrJznJxWS7FdcdzJdiGNnP3h25Pid"
     }
   ]
 }
