@@ -1107,4 +1107,28 @@ footer {
     .home-container {
         gap: 1rem;
     }
+	.music-section {
+        padding: 1rem;
+    }
+
+
+    .music-section h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    
+    .playlist-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .playlist-thumbnail {
+        width: 60px; 
+        height: 60px; 
+    }
+
+    .playlist-title {
+        font-size: 0.9rem; 
+    }
 }
