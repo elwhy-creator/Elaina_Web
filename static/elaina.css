@@ -1058,7 +1058,7 @@ footer {
 
 
     .music-section h3 {
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-bottom: 1rem;
 
     }
@@ -1069,7 +1069,7 @@ footer {
     }
 
     .playlist-title {
-        font-size: 0.9rem; 
+        font-size: 0.8rem; 
     }
     .song-list {
 	 margin-left: 0.75rem;
@@ -1137,6 +1137,6 @@ footer {
     }
     .gsc-search-box .gsc-input-box {
         padding: 0 !important;
-        height: 50% !important;
+        height: 30% !important;
    }
 }
