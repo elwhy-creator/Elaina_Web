@@ -7,6 +7,12 @@
       "src": "static/music/anime-songs/Reina Ueda-Literature.mp3"
     },
     {
+      "poster": "static/images/poster/Unravel_poster.jpg",
+      "title": "Unravel",
+      "artist": "Toru Kitajima",
+      "src": "static/music/anime-songs/Toru Kitajima - Unravel.mp3"
+    },
+    {
       "poster": "static/images/poster/Idol_poster.jpg",
       "title": "Idol",
       "artist": "Yoasobi",
