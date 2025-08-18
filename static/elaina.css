@@ -1088,7 +1088,7 @@ footer {
 	display: none;
     }
     .profile-bio {
-	display: none;
+	font-weight: 400;
     }
     #___gcse_0 > div {
 	display: none;
