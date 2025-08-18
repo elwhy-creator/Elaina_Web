@@ -1115,12 +1115,7 @@ footer {
     .music-section h3 {
         font-size: 1.2rem;
         margin-bottom: 1rem;
-    }
 
-    
-    .playlist-item {
-        flex-direction: column;
-        text-align: center;
     }
     
     .playlist-thumbnail {
