@@ -871,8 +871,6 @@ footer {
 #___gcse_0 > div > div > div.gsc-results-wrapper-overlay.gsc-results-wrapper-visible,
 #___gcse_0 > div > div > div.gsc-modal-background-image.gsc-modal-background-image-visible {
     background-color: var(--surface-color) !important;
-}
-#___gcse_0 > div > div > div.gsc-results-wrapper-overlay.gsc-results-wrapper-visible {
     margin-left: auto !important;
     margin-right: auto !important;
     height: 80vh !important;
