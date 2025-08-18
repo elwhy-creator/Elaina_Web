@@ -1048,6 +1048,25 @@ footer {
      .logo {
 	font-size: 1rem;
     }
+	.music-section {
+        padding: 1rem;
+    }
+
+
+    .music-section h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+
+    }
+    
+    .playlist-thumbnail {
+        width: 60px; 
+        height: 60px; 
+    }
+
+    .playlist-title {
+        font-size: 0.9rem; 
+    }
     .song-list {
 	 margin-left: 0.75rem;
          padding-left: 0.75rem; 
@@ -1106,24 +1125,5 @@ footer {
     }
     .home-container {
         gap: 1rem;
-    }
-	.music-section {
-        padding: 1rem;
-    }
-
-
-    .music-section h3 {
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-
-    }
-    
-    .playlist-thumbnail {
-        width: 60px; 
-        height: 60px; 
-    }
-
-    .playlist-title {
-        font-size: 0.9rem; 
-    }
+	}
 }
