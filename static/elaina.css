@@ -1038,6 +1038,7 @@ footer {
     }
 	.thumbnail-gallery img {
 		height: auto;
+		object-fit: contain;
 	}
 }
 
