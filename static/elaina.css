@@ -1104,13 +1104,14 @@ footer {
     }     
 
      .profile-name {
-	display: none;
+	    display: none;
     }
     .profile-bio {
-	font-weight: 400;
+	    font-weight: 400;
     }
     #___gcse_0 > div {
-	display: none;
+	    height: 100px;
+	    width: 100%;
     }
     .dark-mode-toggle, .menu-toggle, .whatsapp-button {
         padding: 0 0;
