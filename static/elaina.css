@@ -1103,22 +1103,19 @@ footer {
         text-align: center;
     }     
 
-     .profile-name {
+    .profile-name {
 	    display: none;
     }
     .profile-bio {
 	    font-weight: 400;
-    }
-    #___gcse_0 > div {
-	    height: 100px !important;
-	    width: 100% !important;
+
     }
     .dark-mode-toggle, .menu-toggle, .whatsapp-button {
         padding: 0 0;
 	border: none;
     }
     .profile-section {
-        padding: 0 0;
+        padding: 0.90rem 0;
     }
     .profile-picture {
 	width: 100px;
@@ -1127,4 +1124,15 @@ footer {
     .home-container {
         gap: 1rem;
 	}
+    .gcse-search {
+        margin-bottom: 1rem;
+    }
+
+    .gsc-control-cse {
+        padding: 0 !important;
+    }
+    .gsc-search-box .gsc-input-box {
+        padding: 0 !important;
+        height: 50% !important;
+   }
 }
