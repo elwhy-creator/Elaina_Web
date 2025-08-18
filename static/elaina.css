@@ -939,17 +939,16 @@ footer {
 }
 
 .anime-title {
-    font-family: 'Tangerin', cursive;
     text-align: center;
     margin: 0;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 800;
 }
 
 .anime-episode {
     text-align: center;
     margin: 0;
-    font-size: 1rem;
+    font-size: 0.75rem;
     color: #cccccc;
 }
 
@@ -1037,6 +1036,9 @@ footer {
     .song {
 	width: 300px;
     }
+	.thumbnail-gallery img {
+		height: auto;
+	}
 }
 
 @media (max-width: 400px) {
@@ -1078,8 +1080,6 @@ footer {
      .song-artist {
         font-size: 0.60rem;
         text-align: center;
-     }
-     .thumbnail-gallery img {
-	height: 400px;
+     
      }
 }
