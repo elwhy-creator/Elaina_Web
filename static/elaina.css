@@ -54,7 +54,6 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     transition: background-color var(--transition-speed), color var(--transition-speed);
-    overflow: visible !important;
 }
 
 a {
@@ -169,6 +168,7 @@ header {
     align-items: center;
     text-align: center;
     padding: 2rem 0;
+	box-shadow: 0 0 15px rgba(255, 0, 255, 0.2);
 }
 
 .profile-picture {
@@ -176,22 +176,22 @@ header {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 6px solid #2575fc;
+    border: 6px solid #3e3e60;
     margin-bottom: 1rem;
-    box-shadow: 0 0 0 8px rgba(37, 117, 252, 0.3);
+    box-shadow: 0  0 10px #00ffff;
     transition: border-color 0.4s ease, box-shadow 0.4s ease;
 }
 .profile-picture:hover {
-    box-shadow: 0 0 0 8px rgba(106, 17, 203, 0.2);
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
     transform: translateY(-4px) scale(1.03);
 }
 
-.light-mode .profile-picture {
+/*.light-mode .profile-picture {
     border-color: #6a11cb;
     box-shadow: 0 0 0 8px rgba(106, 17, 203, 0.2);
 }
 .light-mode .profile-picture:hover {
-    box-shadow: 0 0 0 8px rgba(37, 117, 252, 0.3);
+    box-shadow: 0 0 0 8px rgba(37, 117, 252, 0.3);*/
 }
 .profile-name {
     font-family: 'Sofia', cursive;
@@ -872,7 +872,7 @@ footer {
 #___gcse_0 > div > div > div.gsc-results-wrapper-overlay.gsc-results-wrapper-visible {
 	background-color: var(--surface-color) !important;
 	top: 5px !important;
-    max-height: 60vh !important;
+    max-height: 80vh !important;
     overflow-y: auto !important;
 }
 
