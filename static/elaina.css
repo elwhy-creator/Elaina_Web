@@ -872,7 +872,7 @@ footer {
 }
 #___gcse_0 > div > div > div.gsc-results-wrapper-overlay.gsc-results-wrapper-visible {
 	background-color: var(--surface-color) !important;
-	verflow-y: auto !important;
+	overflow-y: auto !important;
 	top: 5px !important;
 }
 
@@ -1137,7 +1137,7 @@ footer {
     }
     .gsc-search-box .gsc-input-box {
         padding: 0.5rem !important;
-        height: 50% !important;
+        height: 30% !important;
 	}
 	.home-quick-button {
 		font-size: 10px;
