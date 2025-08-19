@@ -172,11 +172,11 @@ header {
 }
 
 .profile-picture {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #00ffff;
+    border: 5px solid #00ffff;
     margin-bottom: 1rem;
     box-shadow: 0  0 10px #00ffff;
     transition: transfrom 0.3s ease, box-shadow 0.3s ease;
@@ -1109,9 +1109,11 @@ footer {
     }
 	.profile-name {
 		font-size: 1.4rem;
+		border: 2px solid #00ffff;
     }
     .profile-bio {
-	    font-weight: 200;
+	    font-weight: 300;
+		font-size: 0.90rem;
 
     }
     .dark-mode-toggle, .menu-toggle, .whatsapp-button {
