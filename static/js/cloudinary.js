@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         statusText.textContent = 'Mengunggah...';
 
-        fetch('https://api.cloudinary.com/v1_1/YOUR_CLOUDINARY_CLOUD_NAME/upload', {
+        fetch('https://api.cloudinary.com/v1_1/Hontoni_Sugoi/upload', {
             method: 'POST',
             body: formData
         })
