@@ -1142,7 +1142,12 @@ footer {
         padding: 0 !important;
         height: 30% !important;
 	}
+	.quick-links-home {
+		gap: 0.50rem;
+		padding: 0.50rem 0;
+    }
 	.home-quick-button {
+		gap: 0;
 		padding: 0.50rem 1rem;
    }
 }
