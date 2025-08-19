@@ -1128,6 +1128,14 @@ footer {
 	width: 100px;
 	height: 100px;
     }
+#___gcse_0 > div > div > div.gsc-results-wrapper-overlay.gsc-results-wrapper-visible,
+#___gcse_0 > div > div > div.gsc-modal-background-image.gsc-modal-background-image-visible {
+    height: 100vh !important;
+    top: 0 !imoortant;
+	bottom: 0 !important;
+	left: 0 !important;
+}
+
     .home-container {
         gap: 1rem;
 	}
