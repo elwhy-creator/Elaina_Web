@@ -495,7 +495,9 @@ header {
 .heart-icon.liked {
     color: #ff0000;
 }
-
+heart-icon.liked::before {
+    content: '\2665';
+}
 
 .movie-video-title, .movie-video-description,
 .shorts-title, .shorts-description,
@@ -1139,5 +1141,8 @@ footer {
     .gsc-search-box .gsc-input-box {
         padding: 0 !important;
         height: 30% !important;
+	}
+	.home-quick-button {
+		padding: 0.50rem 1rem;
    }
 }
