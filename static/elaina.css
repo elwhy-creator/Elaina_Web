@@ -78,7 +78,7 @@ h1, h2, h3 {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); } 
-  }
+}
 /* =========================================================================
    Header
    ========================================================================= */
@@ -925,7 +925,7 @@ footer {
 }
 
 .anime-item:hover {
-    transform: scale(1.05); /* Efek membesar saat dihover */
+    transform: scale(1.03); /* Efek membesar saat dihover */
 }
 
 .anime-image {
@@ -1079,7 +1079,7 @@ footer {
         display: flex;
         flex-direction: column;
         gap: 0.75rem;
-	height: 200px;
+	    height: 140px;
     }
 
     .song-list .song-thumbnail {
