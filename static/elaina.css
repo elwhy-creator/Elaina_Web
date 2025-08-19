@@ -54,6 +54,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     transition: background-color var(--transition-speed), color var(--transition-speed);
+    overflow: visible !important;
 }
 
 a {
@@ -865,12 +866,16 @@ footer {
     border: 1px solid var(--border-color) !important;
     border-radius: 8px !important;
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    max-height: 60vh !important;
+    overflow-y: auto !important;
 }
 
 #___gcse_0 > div > div > div.gsc-modal-background-image.gsc-modal-background-image-visible,
 #___gcse_0 > div > div > div.gsc-results-wrapper-overlay.gsc-results-wrapper-visible {
 	background-color: var(--surface-color) !important;
 	top: 5px !important;
+    max-height: 60vh !important;
+    overflow-y: auto !important;
 }
 
 .gsc-completion-container {
