@@ -503,8 +503,8 @@ heart-icon.liked::before {
 .movie-video-title, .movie-video-description,
 .shorts-title, .shorts-description,
 .elaina-title, .elaina-p, .videos-title, .videos-p, 
-.video-item-title, .video-item-description {
-    padding: 0.75rem 1rem;
+.video-item-title, .video-item-description, .movie-image-description {
+    padding: 0.75rem 0.75rem;
     text-align: center;
 }
 
@@ -1052,11 +1052,12 @@ footer {
      .logo {
 	font-size: 1rem;
     }
+	h1, h2, h3 {
+		font-size: 1.5rem;
+    }
 	.music-section {
         padding: 1rem;
     }
-
-
     .music-section h3 {
         font-size: 1rem;
         margin-bottom: 1rem;
@@ -1109,7 +1110,6 @@ footer {
     }
 	.profile-name {
 		font-size: 1.4rem;
-		border: 2px solid #00ffff;
     }
     .profile-bio {
 	    font-weight: 300;
@@ -1127,6 +1127,7 @@ footer {
     .profile-picture {
 	width: 100px;
 	height: 100px;
+    border: 2px solid #00ffff;
     }
     .home-container {
         gap: 1rem;
@@ -1145,5 +1146,8 @@ footer {
 	.home-quick-button {
 		font-size: 10px;
 		padding: 0.50rem 1rem;
+	}
+	.section-title {
+		font-size: 1.5rem;
    }
 }
