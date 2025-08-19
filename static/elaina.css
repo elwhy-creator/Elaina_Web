@@ -865,12 +865,13 @@ footer {
     border: 1px solid var(--border-color) !important;
     border-radius: 8px !important;
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
-	z-index: 2000;
-	verflow-y: auto;
-	top: 90%;
 }
+#___gcse_0 > div > div > div.gsc-results-wrapper-overlay.gsc-results-wrapper-visible,
 #___gcse_0 > div > div > div.gsc-modal-background-image.gsc-modal-background-image-visible {
     background-color: var(--surface-color) !important;
+	z-index: 2000;
+	verflow-y: auto;
+	top: 5px;
 }
 
 .gsc-completion-container {
