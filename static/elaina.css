@@ -176,22 +176,22 @@ header {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 6px solid #3e3e60;
+    border: 6px solid #2575fc;
     margin-bottom: 1rem;
     box-shadow: 0  0 10px #00ffff;
-    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    transition: transfrom 0.3s ease, box-shadow 0.3s ease;
 }
 .profile-picture:hover {
     box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
     transform: translateY(-4px) scale(1.03);
 }
 
-/*.light-mode .profile-picture {
+.light-mode .profile-picture {
     border-color: #6a11cb;
-    box-shadow: 0 0 0 8px rgba(106, 17, 203, 0.2);
+    box-shadow: 0 0 10px #2575fc;
 }
 .light-mode .profile-picture:hover {
-    box-shadow: 0 0 0 8px rgba(37, 117, 252, 0.3);*/
+    box-shadow: 0 0 10px #2575fc, 0 0 20px #2575fc;
 }
 .profile-name {
     font-family: 'Sofia', cursive;
