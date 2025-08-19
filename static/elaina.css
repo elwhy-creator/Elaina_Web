@@ -176,27 +176,28 @@ header {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 6px solid #2575fc;
+    border: 6px solid #00ffff;
     margin-bottom: 1rem;
     box-shadow: 0  0 10px #00ffff;
     transition: transfrom 0.3s ease, box-shadow 0.3s ease;
 }
 .profile-picture:hover {
-    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+    box-shadow: 0 0 10px #00ffff, 0 0 30px #00ffff;
     transform: translateY(-4px) scale(1.03);
 }
 
 .light-mode .profile-picture {
     border-color: #6a11cb;
-    box-shadow: 0 0 10px #2575fc;
+    box-shadow: 0 0 10px #6a11cb;
 }
 .light-mode .profile-picture:hover {
-    box-shadow: 0 0 10px #2575fc, 0 0 20px #2575fc;
+    box-shadow: 0 0 10px #6a11cb, 0 0 20px #6a11cb;
 }
 .profile-name {
-    font-family: 'Sofia', cursive;
+    font-family: 'Tangerine', cursive;
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
+	color: #ff00ff;
 }
 
 .profile-bio {
@@ -1107,10 +1108,10 @@ footer {
 		
     }
 	.profile-name {
-		font-size: 1.2rem;
+		font-size: 1.4rem;
     }
     .profile-bio {
-	    font-weight: 400;
+	    font-weight: 200;
 
     }
     .dark-mode-toggle, .menu-toggle, .whatsapp-button {
