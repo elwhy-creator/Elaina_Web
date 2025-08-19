@@ -872,7 +872,6 @@ footer {
 }
 #___gcse_0 > div > div > div.gsc-results-wrapper-overlay.gsc-results-wrapper-visible {
 	background-color: var(--surface-color) !important;
-	z-index: 2000 !important;
 	verflow-y: auto !important;
 	top: 5px !important;
 }
