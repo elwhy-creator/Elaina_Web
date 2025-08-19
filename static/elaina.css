@@ -1107,7 +1107,7 @@ footer {
         text-align: center;
 		
     }
-	,profile-name {
+	.profile-name {
 		font-size: 1.2rem;
     }
     .profile-bio {
