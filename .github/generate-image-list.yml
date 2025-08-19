@@ -1,0 +1,34 @@
+name: Generate Image List
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'static/images/poster/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      
+      - name: Install dependencies
+        run: |
+          npm init -y
+          npm install fs path
+
+      - name: Run script to generate JSON
+        run: node galleryyml.js
+        
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "feat: update images.json with new images"
+          file_pattern: 'static/data/images.json'
