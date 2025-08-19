@@ -867,12 +867,9 @@ footer {
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
 }
 
-#___gcse_0 > div > div > div.gsc-modal-background-image.gsc-modal-background-image-visible {
-    background-color: var(--surface-color) !important;
-}
+#___gcse_0 > div > div > div.gsc-modal-background-image.gsc-modal-background-image-visible,
 #___gcse_0 > div > div > div.gsc-results-wrapper-overlay.gsc-results-wrapper-visible {
 	background-color: var(--surface-color) !important;
-	overflow-y: auto !important;
 	top: 5px !important;
 }
 
@@ -1136,7 +1133,7 @@ footer {
         padding: 0 !important;
     }
     .gsc-search-box .gsc-input-box {
-        padding: 0.5rem !important;
+        padding: 0 !important;
         height: 30% !important;
 	}
 	.home-quick-button {
