@@ -1105,10 +1105,7 @@ footer {
     .song-artist {
         font-size: 0.60rem;
         text-align: center;
-    }     
-
-    .profile-name {
-	    display: none;
+		
     }
     .profile-bio {
 	    font-weight: 400;
