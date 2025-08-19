@@ -866,7 +866,11 @@ footer {
     border-radius: 8px !important;
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
 	z-index: 2000;
-
+	verflow-y: auto;
+	top: 90%;
+}
+#___gcse_0 > div > div > div.gsc-modal-background-image.gsc-modal-background-image-visible {
+    background-color: var(--surface-color) !important;
 }
 
 .gsc-completion-container {
