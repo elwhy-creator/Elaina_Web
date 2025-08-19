@@ -865,6 +865,7 @@ footer {
     border: 1px solid var(--border-color) !important;
     border-radius: 8px !important;
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+	z-index: 2000;
 
 }
 
