@@ -973,6 +973,7 @@ footer {
     background-color: #3498db; /* Warna biru */
     right: 5px;
 }
+
 /* Container pembungkus tombol dan navigasi */
 .scrolling-nav-wrapper {
     display: flex; /* Mengatur semua elemen di dalamnya dalam satu baris */
@@ -1040,7 +1041,6 @@ footer {
 .nav-item:hover {
     background-color: #ddd;
 }
-
 
 
 
