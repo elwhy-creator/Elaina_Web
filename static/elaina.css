@@ -982,7 +982,7 @@ footer {
 }
 
 /* Gaya untuk container navigasi yang digeser */
-.scrolling-nav-container {
+.scrolling-nav-wrapper {
     width: 100%;
     overflow-x: auto;
     white-space: nowrap;
