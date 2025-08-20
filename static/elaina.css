@@ -197,7 +197,7 @@ header {
     font-family: 'Tangerine', cursive;
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
-	color: #ff00ff;
+	color: var(--tetx-color);
 }
 
 .profile-bio {
@@ -213,9 +213,10 @@ header {
 .music-section h3 {
     text-align: center;
     font-size: 2rem;
-    color: #00ffff;
+    color: var(--text-color);
     margin-bottom: 1.5rem;
 	border-bottom: 1px solid var(--text-color);
+	padding-bottom: 1rem;
 }
 
 .playlist-item {
@@ -827,13 +828,13 @@ footer {
 
 .gsc-control-cse {
     background-color: var(--surface-color) !important;
-    border: 1px solid var(--border-color) !important;
+    border: none !important;
     border-radius: 8px !important;
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
 }
 
 .gsc-search-box .gsc-input-box {
-    border: 1px solid var(--accent-color) !important;
+    border: none !important;
     background: var(--background-color) !important;
     padding: 0.75rem !important;
     border-radius: 4px !important;
@@ -847,23 +848,19 @@ footer {
 }
 
 .gsc-search-button-v2 {
-    background-color: var(--accent-color) !important;
-    color: var(--background-color) !important;
+    background-color: var(--survace-color) !important;
     border: none !important;
     border-radius: 4px !important;
     padding: 0.75rem 1rem !important;
     cursor: pointer !important;
     transition: all 0.3s !important;
     box-shadow: 0 0 10px var(--accent-color);
-}
-.gsc-search-button-v2:hover {
-    background-color: var(--surface-color) !important;
-    box-shadow: 0 0 15px var(--surface-color) !important;
+
 }
 
 .gsc-results-wrapper-visible {
     background-color: var(--surface-color) !important;
-    border: 1px solid var(--border-color) !important;
+    border: none !important;
     border-radius: 8px !important;
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
 }
