@@ -978,7 +978,8 @@ footer {
 .scrolling-nav-wrapper {
     display: flex; /* Mengatur semua elemen di dalamnya dalam satu baris */
     align-items: center; /* Memusatkan elemen secara vertikal */
-    gap: 10px; /* Memberikan jarak antara tombol dan navigasi */
+    gap: 10px; 
+	flex-direction: row; /* Memberikan jarak antara tombol dan navigasi */
 }
 
 /* Tombol panah */
