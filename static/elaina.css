@@ -973,6 +973,75 @@ footer {
     background-color: #3498db; /* Warna biru */
     right: 5px;
 }
+/* Gaya untuk wrapper/pembungkus tombol dan navigasi */
+.scrolling-nav-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Gaya untuk container navigasi yang digeser */
+.scrolling-nav-container {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.scrolling-nav-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Gaya untuk tombol panah */
+.scroll-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2px;
+}
+.scroll-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Gaya untuk daftar item di dalam navigasi */
+.scrolling-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+}
+
+/* Gaya untuk setiap item navigasi */
+.nav-item {                                                                                                               background-color: #f0f0f0;
+    color: #555;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease;
+}
+
+/* Gaya untuk item yang sedang aktif/dipilih */
+.nav-item.active {
+    background-color: #000;
+    color: #fff;
+}
+.nav-item:hover {
+    background-color: #ddd;
+}
 
 /* =========================================================================
    Responsif
