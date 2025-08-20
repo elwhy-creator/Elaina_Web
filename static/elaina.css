@@ -503,7 +503,7 @@ heart-icon.liked::before {
 .movie-video-title, .movie-video-description,
 .shorts-title, .shorts-description,
 .elaina-title, .elaina-p, .videos-title, .videos-p, 
-.video-item-title, .video-item-description, .movie-image-description {
+.video-item-title, .video-item-description, .movie-image-title {
     padding: 0.75rem 0.75rem;
     text-align: center;
 }
@@ -1053,7 +1053,7 @@ footer {
 	font-size: 1rem;
     }
 	h1, h2, h3 {
-		font-size: 1.5rem;
+		font-size: 1rem;
     }
 	.music-section {
         padding: 1rem;
