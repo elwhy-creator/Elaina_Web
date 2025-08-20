@@ -973,29 +973,16 @@ footer {
     background-color: #3498db; /* Warna biru */
     right: 5px;
 }
-/* Gaya untuk wrapper/pembungkus tombol dan navigasi */
+/* Container pembungkus tombol dan navigasi */
 .scrolling-nav-wrapper {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    gap: 5px;
+    display: flex; /* Mengatur semua elemen di dalamnya dalam satu baris */
+    align-items: center; /* Memusatkan elemen secara vertikal */
+    gap: 10px; /* Memberikan jarak antara tombol dan navigasi */
 }
 
-/* Gaya untuk container navigasi yang digeser */
-.scrolling-nav-container{
-    width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-.scrolling-nav-container::-webkit-scrollbar {
-    display: none;
-}
-
-/* Gaya untuk tombol panah */
+/* Tombol panah */
 .scroll-btn {
+    flex-shrink: 0; /* Mencegah tombol menyusut saat ada keterbatasan ruang */
     background-color: #f0f0f0;
     border: 1px solid #ccc;
     border-radius: 50%;
@@ -1008,13 +995,25 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 2px;
 }
 .scroll-btn:hover {
     background-color: #e0e0e0;
 }
 
-/* Gaya untuk daftar item di dalam navigasi */
+/* Container Navigasi */
+.scrolling-nav-container {
+    flex-grow: 1; /* Ini kunci utamanya! Membuat container navigasi mengambil seluruh ruang kosong yang tersisa */
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.scrolling-nav-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Daftar Item Navigasi */
 .scrolling-nav-list {
     list-style: none;
     padding: 0;
@@ -1023,8 +1022,9 @@ footer {
     gap: 10px;
 }
 
-/* Gaya untuk setiap item navigasi */
-.nav-item {                                                                                                               background-color: #f0f0f0;
+/* Setiap Item Navigasi */
+.nav-item {
+    background-color: #f0f0f0;
     color: #555;
     padding: 8px 16px;
     border-radius: 20px;
@@ -1033,8 +1033,6 @@ footer {
     flex-shrink: 0;
     transition: background-color 0.3s ease;
 }
-
-/* Gaya untuk item yang sedang aktif/dipilih */
 .nav-item.active {
     background-color: #000;
     color: #fff;
@@ -1042,6 +1040,9 @@ footer {
 .nav-item:hover {
     background-color: #ddd;
 }
+
+
+
 
 /* =========================================================================
    Responsif
