@@ -72,11 +72,11 @@
       const email = emailInput.value;
       const password = passwordInput.value;
       createUserWithEmailAndPassword(auth, email, password)
-        .then(() => alert("Akun berhasil dibuat! Silakan login."))
-        // Register berhasil, arahkan ke halaman utama
-         alert("Pendaftaran berhasil! Mengalihkan ke halaman utama.");
-          window.location.href = "index.html"; 
-
+        .then(() => {
+          // Hanya jika berhasil, jalankan kode ini
+          alert("Pendaftaran berhasil! Mengalihkan ke halaman utama.");
+          window.location.href = "index.html";
+        })
         .catch(error => errorMessage.textContent = error.message);
     });
 
@@ -87,3 +87,5 @@
 
 </body>
 </html>
+
+      
