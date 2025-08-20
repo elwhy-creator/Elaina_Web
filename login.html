@@ -12,49 +12,44 @@
   </form>
   <p id="error-message" style="color: red;"></p>
 
+  <script type="module">
+    // Import fungsi yang dibutuhkan dari SDK
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
 
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+    // Konfigurasi Firebase Anda
+    const firebaseConfig = {
+      apiKey: "AIzaSyBz_AUmIhwhSu-oKNs1GXhMYzCFpwIvQwY",
+      authDomain: "elwhyishere.firebaseapp.com",
+      projectId: "elwhyishere",
+      storageBucket: "elwhyishere.firebasestorage.app",
+      messagingSenderId: "119319950405",
+      appId: "1:119319950405:web:f767878a4ef08be1691f2c",
+      measurementId: "G-27LGDBWS6M"
+    };
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyBz_AUmIhwhSu-oKNs1GXhMYzCFpwIvQwY",
-    authDomain: "elwhyishere.firebaseapp.com",
-    projectId: "elwhyishere",
-    storageBucket: "elwhyishere.firebasestorage.app",
-    messagingSenderId: "119319950405",
-    appId: "1:119319950405:web:f767878a4ef08be1691f2c",
-    measurementId: "G-27LGDBWS6M"
-  };
+    // Inisialisasi Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app); // Gunakan getAuth() dari SDK v9
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  const auth = firebase.auth();
-  const loginForm = document.getElementById('login-form');
-  const errorMessage = document.getElementById('error-message');
+    const loginForm = document.getElementById('login-form');
+    const errorMessage = document.getElementById('error-message');
 
-  loginForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
 
-    auth.signInWithEmailAndPassword(email, password)
-      .then((userCredential) => {
-        // Login berhasil, arahkan ke halaman lain
-        window.location.href = "halaman-utama.html";
-      })
-      .catch((error) => {
-        // Login gagal, tampilkan pesan error
-        errorMessage.textContent = error.message;
-      });
-  });
-</script>
+      // Panggil fungsi signInWithEmailAndPassword() dari SDK v9
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          window.location.href = "index.html";
+        })
+        .catch((error) => {
+          errorMessage.textContent = error.message;
+        });
+    });
+  </script>
 
 </body>
 </html>
