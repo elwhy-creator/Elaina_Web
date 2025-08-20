@@ -210,11 +210,12 @@ header {
     border-radius: 12px;
 }
 
-.music-section h3, .bos-title {
+.music-section h3 {
     text-align: center;
-    font-size: 1.5rem;
-    color: var(--text-color);
+    font-size: 2rem;
+    color: #00ffff;
     margin-bottom: 1.5rem;
+	border-bottom: 1px solid var(--text-color);
 }
 
 .playlist-item {
@@ -656,8 +657,6 @@ footer {
 
 .back-to-top {
     display: none;
-    background-color: var(--background-color);
-    color: var(--secondary-color);
     border: none;
     position: fixed;
     bottom: 20px;
@@ -1054,6 +1053,9 @@ footer {
     }
 	h1, h2, h3 {
 		font-size: 1rem;
+	}
+	.videos-title {
+		font-size: 1.5rem;
     }
 	.music-section {
         padding: 1rem;
