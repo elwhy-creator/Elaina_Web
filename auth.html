@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login / Daftar</title>
+</head>
+<body>
+
+  <div id="auth-container">
+    <h2>Login atau Daftar</h2>
+    <form id="auth-form">
+      <input type="email" id="email" placeholder="Email" required><br>
+      <input type="password" id="password" placeholder="Kata Sandi" required><br>
+      <button type="submit" id="login-btn">Login</button>
+      <button type="button" id="register-btn">Daftar</button>
+    </form>
+    <p id="error-message" style="color: red;"></p>
+  </div>
+
+  <div id="protected-content" style="display:none;">
+    <h1>Selamat Datang!</h1>
+    <p>Ini adalah konten yang hanya bisa diakses setelah login.</p>
+    <button id="logout-btn">Logout</button>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
+
+    // Ganti dengan konfigurasi Firebase Anda
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+      projectId: "YOUR_PROJECT_ID",
+      storageBucket: "YOUR_PROJECT_ID.appspot.com",
+      messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+      appId: "YOUR_APP_ID"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    
+    const authContainer = document.getElementById('auth-container');
+    const protectedContent = document.getElementById('protected-content');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const errorMessage = document.getElementById('error-message');
+    const loginBtn = document.getElementById('login-btn');
+    const registerBtn = document.getElementById('register-btn');
+    const logoutBtn = document.getElementById('logout-btn');
+
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        authContainer.style.display = 'none';
+        protectedContent.style.display = 'block';
+      } else {
+        authContainer.style.display = 'block';
+        protectedContent.style.display = 'none';
+      }
+    });
+
+    loginBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const email = emailInput.value;
+      const password = passwordInput.value;
+      signInWithEmailAndPassword(auth, email, password)
+        .catch(error => errorMessage.textContent = error.message);
+    });
+
+    registerBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const email = emailInput.value;
+      const password = passwordInput.value;
+      createUserWithEmailAndPassword(auth, email, password)
+        .then(() => alert("Akun berhasil dibuat! Silakan login."))
+        .catch(error => errorMessage.textContent = error.message);
+    });
+
+    logoutBtn.addEventListener('click', () => {
+      signOut(auth).catch(error => console.error("Logout gagal:", error));
+    });
+  </script>
+
+</body>
+</html>
