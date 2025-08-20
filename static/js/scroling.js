@@ -9,11 +9,11 @@ const scrollBtnRight = document.querySelector('.scroll-btn.right');
 const scrollAmount = 150;
 
 // Tambahkan event listener ke tombol kanan
-scrollBtnRight.addEventListener('click', (<) => {
+scrollBtnRight.addEventListener('click', () => {
     container.scrollLeft += scrollAmount;
 });
 
 // Tambahkan event listener ke tombol kiri
-scrollBtnLeft.addEventListener('click', (>) => {
+scrollBtnLeft.addEventListener('click', () => {
     container.scrollLeft -= scrollAmount;
 });
