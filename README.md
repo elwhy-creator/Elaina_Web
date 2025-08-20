@@ -1,3 +1,4 @@
 # 🌼Elaina Web🌼
-⚠️Anda Masuk Di Repo Web Pribadi Saya⚠️
-Saya Melampiaskan cinta saya kepada elaina lewat chanel ini.
+⚠️Anda Masuk Di Repo Web Pribadi Saya.⚠️
+Apa Yang Anda Cari?..
+Chanel ini Untuk Kesenangan Saya, Dan Cara Saya Meluapkan Rasa Cinta Saya Kepada Elaina Chan🤤.
