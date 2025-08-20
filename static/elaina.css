@@ -992,16 +992,13 @@ footer {
     font-size: 18px;
     font-weight: bold;
     color: #555;
+	flex-direction: row;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.scrol-btn.right {
-	right: 5px;
-.scrol-btn.left {
-	left:5px;
-}
+
 .scroll-btn:hover {
     background-color: #e0e0e0;
 }
@@ -1039,15 +1036,13 @@ footer {
     flex-shrink: 0;
     transition: background-color 0.3s ease;
 }
-.nav-item.active {
+.nav-item.passife {
     background-color: #000;
     color: #fff;
 }
 .nav-item:hover {
     background-color: #ddd;
 }
-
-
 
 /* =========================================================================
    Responsif
