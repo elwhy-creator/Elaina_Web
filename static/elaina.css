@@ -997,6 +997,11 @@ footer {
     justify-content: center;
     align-items: center;
 }
+.scrol-btn.right {
+	right: 5px;
+.scrol-btn.left {
+	left:5px;
+}
 .scroll-btn:hover {
     background-color: #e0e0e0;
 }
