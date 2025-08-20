@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Halaman Login</title>
+</head>
+<body>
+  <h2>Silakan Login</h2>
+  <form id="login-form">
+    <input type="email" id="email" placeholder="Email" required><br>
+    <input type="password" id="password" placeholder="Kata Sandi" required><br>
+    <button type="submit">Login</button>
+  </form>
+  <p id="error-message" style="color: red;"></p>
+
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBz_AUmIhwhSu-oKNs1GXhMYzCFpwIvQwY",
+    authDomain: "elwhyishere.firebaseapp.com",
+    projectId: "elwhyishere",
+    storageBucket: "elwhyishere.firebasestorage.app",
+    messagingSenderId: "119319950405",
+    appId: "1:119319950405:web:f767878a4ef08be1691f2c",
+    measurementId: "G-27LGDBWS6M"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const auth = firebase.auth();
+  const loginForm = document.getElementById('login-form');
+  const errorMessage = document.getElementById('error-message');
+
+  loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    auth.signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        // Login berhasil, arahkan ke halaman lain
+        window.location.href = "halaman-utama.html";
+      })
+      .catch((error) => {
+        // Login gagal, tampilkan pesan error
+        errorMessage.textContent = error.message;
+      });
+  });
+</script>
+
+</body>
+</html>
