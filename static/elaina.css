@@ -1143,7 +1143,8 @@ footer {
     }
 
     .song-list .song {
-        width: 200px;
+        width: 90%;
+		height: 20%;
 	
     }
 
