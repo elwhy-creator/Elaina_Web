@@ -197,7 +197,26 @@
             <a href="https://t.me/6285707357830?text=Tinggalkan%20Pesan..." target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
        </p>
 							</footer>
-			 <script
+    <script type="module">
+    // Impor fungsi yang dibutuhkan dari SDK Firebase
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
+
+    // Konfigurasi Firebase Anda
+    const firebaseConfig = {
+      apiKey: "AIzaSyBz_AUmIhwhSu-oKNs1GXhMYzCFpwIvQwY",
+      authDomain: "elwhyishere.firebaseapp.com",
+      projectId: "elwhyishere",
+      storageBucket: "elwhyishere.firebasestorage.app",
+      messagingSenderId: "119319950405",
+      appId: "1:119319950405:web:f767878a4ef08be1691f2c",
+      measurementId: "G-27LGDBWS6M"
+    };
+
+    // Inisialisasi Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
     // Cek status login
     onAuthStateChanged(auth, (user) => {
       if (!user) {
