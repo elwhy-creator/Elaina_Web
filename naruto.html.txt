@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naruto Collection - Elaina Chan</title>
+    <style>
+        /* Gaya CSS */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .naruto-container {
+            animation: fadeIn 3s ease-out forwards;
+            transform: scale(1.02);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        a {
+            text-decoration: none;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 16px;
+            background-color: #e9e9e9;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+        .logo {
+            color: #e60023;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-right: 16px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            padding: 8px 16px;
+            background-color: #fff;
+            border-radius: 24px;
+        }
+        .search-bar input {
+            border: none;
+            background: url('static/naruto/logo_akatsuki.jpeg') left center no-repeat #fff;
+            background-size: 20px 20px;
+            outline: none;
+            flex-grow: 1;
+            font-size: 16px;
+            padding: 0 8px 0px 29px;
+            width: 80%;
+            height: 80%;
+        }
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+        }
+        .nav-buttons .btn {
+            padding: 12px 16px;
+            font-weight: bold;
+            font-size: 16px;
+            border-radius: 24px;
+            color: #333;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            margin-left: 8px;
+        }
+        .nav-buttons .btn.primary {
+            background-color: #e60023;
+            color: #fff;
+        }
+        .nav-buttons .btn.profile img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+        }
+        .nav-buttons .icon {
+            font-size: 24px;
+            color: #333;
+            margin-left: 8px;
+            cursor: pointer;
+        }
+        .icon, .btn.primary, .btn.buat {
+            display: none;
+        }
+        .gallery-container {
+            padding: 16px;
+            columns: 3;
+            column-gap: 16px;
+        }
+        .card {
+            display: block;
+            margin-bottom: 16px;
+            break-inside: avoid;
+            background-color: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+        }
+        .scrolling-nav-wrapper {
+            display: flex; 
+            align-items: center; 
+            gap: 10px;
+            margin-bottom: 1rem;
+        }
+        .scroll-btn {
+            flex-shrink: 0; 
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #555;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .scroll-btn:hover {
+            background-color: #e0e0e0;
+        }
+        .scrolling-nav-container {
+            flex-grow: 1; 
+            overflow-x: auto;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .scrolling-nav-container::-webkit-scrollbar {
+            display: none;
+        }
+        .scroll-btn.right {
+            right: 5px;
+            margin: 0 0 0 0;
+        }
+        .scrolling-nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 5px;
+        }
+        .nav-item {
+            background-color: #f0f0f0;
+            color: #555;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 10px;
+            flex-shrink: 0;
+            transition: background-color 0.3s ease;
+        }
+        .nav-item.active {
+            background-color: #00ffff;
+            color: white;
+        }
+        .nav-item.passife {
+            background-color: #000;
+            color: white;
+        }
+        .nav-item:hover {
+            background-color: #ddd;
+        }
+        .dropdown-container {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: #fff;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1000;
+            border-radius: 8px;
+            padding: 10px;
+            margin-top: 5px;
+        }
+        .dropdown-menu.show {
+            display: block;
+        }
+        .dropdown-item {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
+            border-radius: 5px;
+        }
+        .dropdown-item:hover {
+            background-color: #f0f0f0;
+        }
+        .dropdown-divider {
+            height: 1px;
+            background-color: #eee;
+            margin: 10px 0;
+        }
+        .dropdown-header {
+            margin: 5px 0;
+            padding: 0 15px;
+            font-size: 14px;
+            color: #666;
+        }
+        .category-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .category-list li {
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+        .category-list li:hover {
+            background-color: #f0f0f0;
+        }
+        @media (min-width: 600px) {
+            .gallery-container {
+                columns: 3;
+            }
+            .search-bar {
+                width: 100%;
+            }
+            .icon, .btn.primary, .btn {
+                display: block;
+            }
+        }
+        @media (min-width: 900px) {
+            .gallery-container {
+                columns: 4;
+            }
+        }
+        @media (min-width: 1200px) {
+            .gallery-container {
+                columns: 5;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="/" class="logo">W</a>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Cari">
+            <span class="search-icon" id="search-icon">🔍</span>
+            <div id="search-results" class="search-results"></div>
+        </div>
+        <div class="nav-buttons">
+            <a href="/" class="btn primary">Beranda</a>
+            <a href="#" class="btn buat">Buat</a>
+            <div class="dropdown-container">
+                <a href="#" class="btn profile" id="profile-btn">
+                    <img src="static/images/kekasihku.jpg" alt="Profil">
+                </a>
+                <div id="profile-menu" class="dropdown-menu">
+                    <a href="#" class="dropdown-item">Pengaturan</a>
+                    <a href="#" class="dropdown-item">Logout</a>
+                    <a href="#" class="dropdown-item social-login fb">Login Facebook</a>
+                    <a href="#" class="dropdown-item social-login ig">Login Instagram</a>
+                    <div class="dropdown-divider"></div>
+                    <h4 class="dropdown-header">Category</h4>
+                    <ul id="category-list" class="category-list"></ul>
+                </div>
+            </div>
+            <span class="icon" id="notification-btn">🔔</span>
+            <span class="icon" id="message-btn">💬</span>
+            <span class="icon" id="options-btn">...</span>
+        </div>
+    </header>
+
+    <main class="naruto-container">
+        <div class="scrolling-nav-wrapper">
+            <a class="scroll-btn left"> < </a>
+            <div class="scrolling-nav-container">
+                <ul class="scrolling-nav-list text-list">
+                    <li class="nav-item active"><a href="naruto">Naruto</a></li>
+                    <li class="nav-item"><a href="picture">My Baby</a></li>
+                    <li class="nav-item"><a href="douyin">Douyin</a></li>
+                    <li class="nav-item"><a href="hentai">Hentai</a></li>
+                    <li class="nav-item"><a href="fanart">FanArt</a></li>
+                    <li class="nav-item"><a href="poster">Poster</a></li>
+                    <li class="nav-item"><a href="manga">Manga</a></li>
+                    <li class="nav-item"><a href="#">Exhibition & Signage</a></li>
+                    <li class="nav-item"><a href="#">Logo</a></li>
+                    <li class="nav-item"><a href="index.html#playlist1">Music Packaging</a></li>
+                    <li class="nav-item passife"><a href="all.html">All Categories</a></li>
+                </ul>
+            </div>
+            <a class="scroll-btn right"> > </a>
+        </div>
+
+        <div id="gallery-container" class="gallery-container"></div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fungsionalitas Navigasi (ikon)
+            const notificationBtn = document.getElementById('notification-btn');
+            const messageBtn = document.getElementById('message-btn');
+            const optionsBtn = document.getElementById('options-btn');
+
+            if (notificationBtn) notificationBtn.addEventListener('click', function() { alert('Tampilkan notifikasi!'); });
+            if (messageBtn) messageBtn.addEventListener('click', function() { alert('Tampilkan pesan!'); });
+            if (optionsBtn) optionsBtn.addEventListener('click', function() { alert('Tampilkan menu opsi!'); });
+            
+            // Fungsionalitas Dropdown
+            const profileBtn = document.getElementById('profile-btn');
+            const profileMenu = document.getElementById('profile-menu');
+            const categoryList = document.getElementById('category-list');
+            
+            if (profileBtn) {
+                profileBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    profileMenu.classList.toggle('show');
+                    loadCategories();
+                });
+            }
+
+            window.addEventListener('click', function(event) {
+                if (profileMenu && !event.target.closest('.dropdown-container')) {
+                    profileMenu.classList.remove('show');
+                }
+            });
+
+            function loadCategories() {
+                fetch('static/categories.json')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Gagal memuat kategori');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        categoryList.innerHTML = '';
+                        data.categories.forEach(category => {
+                            const li = document.createElement('li');
+                            li.textContent = category.name;
+                            categoryList.appendChild(li);
+                        });
+                    })
+                    .catch(error => {
+                        console.error("Gagal memuat kategori:", error);
+                    });
+            }
+
+            // Fungsionalitas Pencarian
+            const searchIcon = document.getElementById('search-icon');
+            const searchInput = document.getElementById('search-input');
+            const searchResults = document.getElementById('search-results');
+            
+            if (searchIcon) {
+                searchIcon.addEventListener('click', function() {
+                    searchInput.focus();
+                });
+            }
+
+            let allContent = [];
+
+            Promise.all([
+                fetch('static/songs.json').then(res => res.json()).catch(() => ({})),
+                fetch('static/images.json').then(res => res.json()).catch(() => ({})),
+                fetch('static/videos.json').then(res => res.json()).catch(() => ({}))
+            ]).then(data => {
+                const songsData = data[0];
+                const imagesData = data[1];
+                const videosData = data[2];
+                allContent = [
+                    ...(songsData.anime_songs || []),
+                    ...(songsData.mixed_album_songs || []),
+                    ...(imagesData.images || []),
+                    ...(videosData.videos || [])
+                ];
+                searchInput.addEventListener('input', function(e) {
+                    const query = e.target.value.toLowerCase().trim();
+                    if (query.length > 0) {
+                        searchAllContent(query);
+                        searchResults.classList.add('visible');
+                    } else {
+                        searchResults.innerHTML = '';
+                        searchResults.classList.remove('visible');
+                    }
+                });
+                function searchAllContent(query) {
+                    searchResults.innerHTML = '';
+                    const filteredResults = allContent.filter(item => {
+                        const searchableText = `${item.title || ''} ${item.artist || ''} ${item.category || ''}`.toLowerCase();
+                        return searchableText.includes(query);
+                    });
+                    if (filteredResults.length === 0) {
+                        searchResults.innerHTML = '<p>Tidak ada hasil yang ditemukan.</p>';
+                        return;
+                    }
+                    filteredResults.forEach(item => {
+                        const resultItem = document.createElement('a');
+                        resultItem.href = item.href || '#';
+                        resultItem.classList.add('search-result-item');
+                        const title = item.title || item.category || 'Konten';
+                        const subtitle = item.artist ? `Oleh: ${item.artist}` : item.category ? `Kategori: ${item.category}` : '';
+                        resultItem.innerHTML = `<strong>${title}</strong><br><small>${subtitle}</small>`;
+                        searchResults.appendChild(resultItem);
+                    });
+                }
+            });
+
+            // Fungsionalitas Galeri
+            const galleryContainer = document.getElementById('gallery-container');
+            
+            fetch('static/images.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Gagal memuat data gambar');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    data.images.forEach(image => {
+                        const card = document.createElement('a');
+                        card.href = image.href || '#';
+                        card.classList.add('card');
+                        const img = document.createElement('img');
+                        img.src = image.src;
+                        img.alt = image.title || 'Gambar';
+                        card.appendChild(img);
+                        galleryContainer.appendChild(card);
+                    });
+                })
+                .catch(error => {
+                    console.error('Ada masalah dengan fetch operation:', error);
+                    galleryContainer.innerHTML = '<p>Gagal memuat galeri. Silakan coba lagi nanti.</p>';
+                });
+
+            // Fungsionalitas Scrolling Nav
+            const scrollingNavContainer = document.querySelector('.scrolling-nav-container');
+            const leftScrollBtn = document.querySelector('.scroll-btn.left');
+            const rightScrollBtn = document.querySelector('.scroll-btn.right');
+            
+            if (leftScrollBtn) {
+                leftScrollBtn.addEventListener('click', () => {
+                    scrollingNavContainer.scrollBy({
+                        left: -200,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            if (rightScrollBtn) {
+                rightScrollBtn.addEventListener('click', () => {
+                    scrollingNavContainer.scrollBy({
+                        left: 200,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+            const loginFacebookBtn = document.querySelector('.dropdown-item.social-login.fb');
+            const loginInstagramBtn = document.querySelector('.dropdown-item.social-login.ig');
+
+       	     if (loginFacebookBtn) {
+        	loginFacebookBtn.addEventListener('click', function(e) {
+            	e.preventDefault();
+            	alert('Mengalihkan ke halaman login Facebook...');
+            	console.log('Fungsi login Facebook dipicu');
+        	});
+    	    }
+
+       	     if (loginInstagramBtn) {
+        	loginInstagramBtn.addEventListener('click', function(e) {
+            	e.preventDefault();
+            	alert('Mengalihkan ke halaman login Instagram...');
+            	// Di sini kamu bisa menambahkan kode untuk mengalihkan ke halaman login Instagram
+            	console.log('Fungsi login Instagram dipicu');
+        	});
+    	    }
+
+        });
+    </script>
+</body>
+</html>
