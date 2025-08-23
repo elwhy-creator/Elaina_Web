@@ -1,0 +1,32 @@
+name: Automatic Image Upload
+
+on:
+  push:
+    branches:
+      - main # Ubah ke 'master' jika branch utama kamu adalah master
+
+jobs:
+  upload-images:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        
+      - name: Configure Git
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Add and commit new images from static/images/poster
+        run: |
+          # Perintah untuk menambahkan semua file baru di dalam direktori yang ditentukan
+          git add static/images/poster/
+          
+          # Cek apakah ada file baru yang perlu di-commit
+          if git status --porcelain | grep -q 'static/images/poster/'; then
+            git commit -m "feat: automatically add new images"
+            git push
+          else
+            echo "No new images to upload in static/images/poster."
+          fi
