@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta name="google-site-verification" content="kon0eawmrgEHzvac_Ibvae-6_F6suftewCsfBLeaSrM" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyouka - Elaina Chan</title>
+    <link rel="icon" type="image/x-icon" href="static/images/KawaiEl.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="static/elaina.css">
+</head>
+<body id="body" class="drak-mode"> <header>
+        <div class="header-container">
+<img src="static/images/kekasihku.jpg" alt="Elaina Chan" class="profile-picture"></img>
+            <a href="index.html" class="logo"><i class="fas fa-hat-wizard"></i> ZONA ELAINA <i class="fas fa-star"></i></a>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="anime.html" class="active">Anime</a></li>
+                    <li><a href="shorts.html" class="active">Shorts</a></li>
+                    <li><a href="elaina.html" class="active">Elaina</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="movies.html" class="active">Movies</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+		</nav>
+            <div class="header-actions">
+                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <i class="fa fa-adjust" aria-hidden="true"></i>
+                </button>
+                <a href="https://wa.me/6285707357830?text=Tinggalkan%20Pesan...." target="_blank" class="whatsapp-button">
+                   <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <button class="menu-toggle" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+                <div id="imageModal" class="image-modal-overlay">
+                 <div class="image-modal-content">
+                 <span class="image-close-button">&times;</span>
+                 <img class="image-modal-body" id="fullImage" alt="What Hapend">
+                 <div class="image-modal-caption" id="imageCaption"></div>
+                 <div id="loader" class="loader"></div>
+                 <div class="related-images">
+                 <a id="modal-link" href="#"><i class="fas fa-share-from-square"></i>Gambar Lainya</a>
+                 <div class="related-images-container">
+             </div>
+          </div>
+	</div>
+	</header>
+<main class="container">
+   			 <section class="video-section">
+        		<h2 class="section-title">Hyouka</h2>
+		               <div id="hyouka" class="video-grid">
+
+	        	    <div class="video-item" data-category="hyouka">
+<iframe src="https://drive.google.com/file/d/1OkcX7AoK5VB0iwnaTRvwRGjqnNQjgEH3/preview" width="100%" height="200px"></iframe>
+                <h3 class="video-item-title">Hyouka</h3>
+                <p class="video-item-description">Episode:{ 1 }</p>
+            </div>
+
+            <div class="video-item" data-category="hyouka">
+<iframe src="https://drive.google.com/file/d/1SeT4FIh3g2A7lTpVCjfqJW-NjWVrPc8_/preview" width="100%" height="200px"></iframe>
+                <h3 class="video-item-title">Hyouka</h3>
+                <p class="video-item-description">Episode:{ 2 }</p>
+            </div>
+            <div class="video-item" data-category="hyouka">
+<iframe src="https://drive.google.com/file/d/1ShxC3sUTLpuD_0SfNjK_b-YASuFVXG2F/preview" width="100%" height="200px"></iframe>
+                <h3 class="video-item-title">Hyouka</h3>
+                <p class="video-item-description">Episode:{ 3 }</p>
+        </div>
+
+            <div class="video-item" data-category="hyouka">
+<iframe src="https://drive.google.com/file/d/1SqYZvOPcJ4LOBtnrwi-z_kb21krbfd4L/preview" width="100%" height="200px"></iframe>
+                <h3 class="video-item-title">Hyouka</h3>
+                <p class="video-item-description">Episode:{ 4 }</p>
+        </div>
+
+            <div class="video-item" data-category="hyouka">
+<iframe src="https://drive.google.com/file/d/1SqaQMvGDrqDkoGBGkwycYZTAyTJWeuGL/preview" width="100%" height="200px"></iframe>
+                <h3 class="video-item-title">Hyouka</h3>
+                <p class="video-item-description">Episode:{ 5 }</p>
+        </div>
+
+            <div class="video-item" data-category="hyouka">
+<iframe src="https://drive.google.com/file/d/1Sr_YPlCCW8gtBkg4PFm2AvoFTMBqbHUt/preview" width="100%" height="200px"></iframe>
+                <h3 class="video-item-title">Hyouka</h3>
+                <p class="video-item-description">Episode:{ 6 }</p>
+        </div>
+
+            <div class="video-item" data-category="hyouka">
+<iframe src="https://drive.google.com/file/d/1SuccFIwPHf0dHvE7d9MO1hR8HjRAkwnO/preview" width="100%" height="200px"></iframe>
+                <h3 class="video-item-title">Hyouka</h3>
+                <p class="video-item-description">Episode:{ 7 }</p>
+        </div>
+
+            <div class="video-item" data-category="hyouka">
+<iframe src="https://drive.google.com/file/d/1SwH5OcVGuVs0Fk7K9SnPz6hm2Nz9xKIF/preview" width="100%" height="200px"></iframe>
+                <h3 class="video-item-title">Hyouka</h3>
+                <p class="video-item-description">Episode:{ 8 }</p>
+        </div>
+
+            <div class="video-item" data-category="hyouka">
+<iframe src="https://drive.google.com/file/d/1SwuKgIAobyGy8Lp71TiCodGfjk8pC7Ez/preview" width="100%" height="200px"></iframe>
+                <h3 class="video-item-title">Hyouka</h3>
+                <p class="video-item-description">Episode:{ 9 }</p>
+        </div>
+
+            <div class="video-item" data-category="hyouka">
+<iframe src="https://drive.google.com/file/d/1Op2kpkREvlaW8kFIVl8s1o1GpRT6hLh6/preview" width="100%" height="200px"></iframe>
+                <h3 class="video-item-title">Hyouka</h3>
+                <p class="video-item-description">Episode:{ 10 }</p>
+        </div>
+
+            <div class="video-item" data-category="hyouka">
+<iframe src="https://drive.google.com/file/d/1P2zS_RZexs5ed7Bakm9_Sl6JqHMsmQEM/preview" width="100%" height="200px"></iframe>
+                <h3 class="video-item-title">Hyouka</h3>
+                <p class="video-item-description">Episode:{ 11 }</p>
+        </div>
+
+            <div class="video-item" data-category="hyouka">
+<iframe src="https://drive.google.com/file/d/1P6dRPpy-po46ODTMjW2lxE0-md0IBa1P/preview" width="100%" height="200px"></iframe>
+                <h3 class="video-item-title">Hyouka</h3>
+                <p class="video-item-description">Episode:{ 12 }</p>
+        </div>
+
+            <div class="video-item" data-category="hyouka">
+<iframe src="https://drive.google.com/file/d/1Omsi8mWWS52ZPaKD1Qs9ZXNUgPtANIvh/preview" width="100%" height="200px"></iframe>
+                <h3 class="video-item-title">Hyouka</h3>
+                <p class="video-item-description">Episode:{ 13 }</p>
+        </div>
+
+            <div class="video-item" data-category="hyouka">
+<iframe src="https://drive.google.com/file/d/1P7Y-OXQQdrn8iZHHYdqD2sI_YSOIbtv5/preview" width="100%" height="200px"></iframe>
+                <h3 class="video-item-title">Hyouka</h3>
+                <p class="video-item-description">Episode:{ 14 }</p>
+        </div>
+
+            <div class="video-item" data-category="hyouka">
+<iframe src="https://drive.google.com/file/d/1PLhQYfHUIE9KNn2IStVdAySqT6lUYwVU/preview" width="100%" height="200px"></iframe>
+                <h3 class="video-item-title">Hyouka</h3>
+                <p class="video-item-description">Episode:{ 15 }</p>
+        </div>
+
+            <div class="video-item" data-category="hyouka">
+<iframe src="https://drive.google.com/file/d/1PMNKHvxMYApmdAm--gHEMSM2caMJOvGn/preview" width="100%" height="200px"></iframe>
+                <h3 class="video-item-title">Hyouka</h3>
+                <p class="video-item-description">Episode:{ 16 }</p>
+        </div>
+
+            <div class="video-item" data-category="hyouka">
+<iframe src="https://drive.google.com/file/d/1POIdAYyT7BVWV1SPQ0Nsk8VkinPQe5v9/preview" width="100%" height="200px"></iframe>
+                <h3 class="video-item-title">Hyouka</h3>
+                <p class="video-item-description">Episode:{ 17 }</p>
+        </div>
+
+            <div class="video-item" data-category="hyouka">
+<iframe src="https://drive.google.com/file/d/1POdS3Zv8ve_b6M7CG7-HVB6MsVkbpjmv/preview" width="100%" height="200px"></iframe>
+                <h3 class="video-item-title">Hyouka</h3>
+                <p class="video-item-description">Episode:{ 18 }</p>
+        </div>
+
+            <div class="video-item" data-category="hyouka">
+<iframe src="https://drive.google.com/file/d/1SOmhKJr_qjfiHoO-hORUKgHZVOl_yjdO/preview" width="100%" height="200px"></iframe>
+                <h3 class="video-item-title">Hyouka</h3>
+                <p class="video-item-description">Episode:{ 19 }</p>
+        </div>
+
+            <div class="video-item" data-category="hyouka">
+<iframe src="https://drive.google.com/file/d/1Sa8OqyOTjUD2VUrGEIn_IhUsVb_9i34o/preview" width="100%" height="200px"></iframe>
+                <h3 class="video-item-title">Hyouka</h3>
+                <p class="video-item-description">Episode:{ 20 }</p>
+        </div>
+
+            <div class="video-item" data-category="hyouka">
+<iframe src="https://drive.google.com/file/d/1SkPTOq5ptaTlq42tWkxTx5SmJAk_x7wv/preview" width="100%" height="200px"></iframe>
+                <h3 class="video-item-title">Hyouka</h3>
+                <p class="video-item-description">Episode:{ 21 }</p>
+        </div>
+
+            <div class="video-item" data-category="hyouka">
+<iframe src="https://drive.google.com/file/d/1SQEY7YTmuu-GYGAoMOfErMG1xhn9tWzb/preview" width="100%" height="200px"></iframe>
+                <h3 class="video-item-title">Hyouka</h3>
+                <p class="video-item-description">Episode:{ 22 }</p>
+        </div>
+
+            <div class="video-item" data-category="hyouka">
+<iframe src="https://drive.google.com/file/d/1T3rbn2R05tFRCcCO1KHCQiA19kxCZy-9/preview" width="100%" height="200px"></iframe>
+                <h3 class="video-item-title">What Should Be Had</h3>
+                <p class="video-item-description">Hyouka Ova</p>
+</div>
+
+    </section>
+<a href="#" id="backToTopBtn" class="back-to-top">⬆️  </a>
+</div>
+
+</main>
+                            <footer>
+        <div class="footer-links">
+    <a href="https://www.facebook.com/share/1CQRuBRsAc/" class="nav-button"><i class="fab fa-facebook-f"></i> Facebook</a>
+    <a href="https://pin.it/2AbohMfUX" class="nav-button"><i class="fab fa-pinterest-p"></i> Pinterest</a>
+    <a href="https://www.instagram.com/elaina.chan09?igsh=MXRraGwwNXVqazF6Yg==" target="_blank" class="nav-button"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="https://www.tiktok.com/@elaina.chan459" class="nav-button"><i class="fab fa-tiktok"></i> Tiktok</a>
+    <a href="https://youtube.com/@elainachan09?si=gpZVXnLocXd8eVOu" class="nav-button"><i class="fab fa-youtube"></i> Youtube</a>
+    </div>
+        <p class="copyright-text">
+            &copy; 2025 ZONA ELAINA.
+            <br>
+            <a href="https://www.instagram.com/elaina.chan09?igsh=MXRraGwwNXVqazF6Yg==" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> |
+            <a href="https://t.me/Halo, Saya pakai Telegram untuk chat. Ayo ikutan, unduh di sini: https://telegram.org/dl" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
+        </p>
+    </footer>
+
+    <script src="static/js/script.js"></script>
+    <script src="static/js/icon.js"></script>
+    <script src="static/js/modal.js"></script>
+    <script src="static/js/movies.js"></script>
+    </script>
+</body>
+</html>

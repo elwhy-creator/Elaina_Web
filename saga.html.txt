@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta name="google-site-verification" content="kon0eawmrgEHzvac_Ibvae-6_F6suftewCsfBLeaSrM" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saga Of Tanya - Elaina Chan</title>
+    <link rel="icon" type="image/x-icon" href="static/images/KawaiEl.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="static/elaina.css">
+</head>
+<body id="body" class="drak-mode"> <header>
+        <div class="header-container">
+<img src="static/images/kekasihku.jpg" alt="Elaina Chan" class="profile-picture"></img>
+            <a href="index.html" class="logo"><i class="fas fa-hat-wizard"></i> ZONA ELAINA <i class="fas fa-star"></i></a>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="anime.html" class="active">Anime</a></li>
+                    <li><a href="shorts.html" class="active">Shorts</a></li>
+                    <li><a href="elaina.html" class="active">Elaina</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="movies.html" class="active">Movies</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+		</nav>
+            <div class="header-actions">
+                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <i class="fa fa-adjust" aria-hidden="true"></i>
+                </button>
+                <a href="https://wa.me/6285707357830?text=Tingalkan%20Pesan..." target="_blank" class="whatsapp-button">
+                   <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <button class="menu-toggle" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+                <div id="imageModal" class="image-modal-overlay">
+                 <div class="image-modal-content">
+                 <span class="image-close-button">&times;</span>
+                 <img class="image-modal-body" id="fullImage" alt="What Hapend">
+                 <div class="image-modal-caption" id="imageCaption"></div>
+                 <div id="loader" class="loader"></div>
+                 <div class="related-images">
+                 <a id="modal-link" href="#"><i class="fas fa-share-from-square"></i>Gambar Lainya</a>
+                 <div class="related-images-container">
+             </div>
+          </div>
+	</div>
+	</header>
+<main class="container">
+
+     				<section class="video-section">
+        		<h2 class="section-title">Saga of Tanya The Evil</h2>
+        				<div class="video-grid">
+            				<div id="saga" class="video-item" data-category="tanya">
+<video id="myVideo" controls playsinline preload="none" poster="static/images/poster/poster_tanya.jpeg" width="100%" height="200px">
+                    <source src="https://www.dropbox.com/scl/fi/lkxuotz5h508s2p72b2p7/tanya1.webm?rlkey=eyuguuijzk6qtrvqeb3qgh24u&st=9ryi3oc2&dl=1" type="video/webm">
+                    Browser Anda tidak mendukung tag video.
+                </video>
+                <h3 class="video-item-title">Saga Of Tanya</h3>
+                <p class="video-item-description">Episode:{ 1 }</p>
+            </div>
+            <div class="video-item" data-category="tanya">
+<video id="myVideo" controls playsinline preload="none" poster="static/images/poster/poster_tanya.jpeg" width="100%" height="200px">
+                    <source src="https://www.dropbox.com/scl/fi/sudpotooj4utblowwie21/tanya2.webm?rlkey=h2zshkpf77d48qrrherh7qpbo&st=wkf1jgwt&dl=1" type="video/webm">
+                    Browser Anda tidak mendukung tag video.
+                </video>
+                <h3 class="video-item-title">Saga Of Tanya</h3>
+                <p class="video-item-description">Episode: 2</p>
+            </div>
+            <div class="video-item" data-category="tanya">
+<video id="myVideo" controls playsinline preload="none" poster="static/images/poster/poster_tanya.jpeg" width="100%" height="200px">
+                    <source src="https://www.dropbox.com/scl/fi/kiq9ofcd5pbxe3skj459g/tanya3.webm?rlkey=q8tawvka5loso5xjmel5m4v4h&st=zg1dw22u&dl=1" type="video/webm">
+                    Browser Anda tidak mendukung tag video.
+                </video>
+                <h3 class="video-item-title">Saga Of Tanya</h3>
+                <p class="video-item-description">Episode:{ 3 }</p>
+            </div>
+            <div class="video-item" data-category="tanya">
+<video id="myVideo" controls playsinline preload="none" poster="static/images/poster/poster_tanya.jpeg" width="100%" height="200px">
+                    <source src="https://www.dropbox.com/scl/fi/gva4hom8ht87t9k4jyiq8/tanya4.webm?rlkey=4qkwopu5uzhar55e1yddz9bns&st=8mido3tp&dl=1" type="video/webm">
+                    Browser Anda tidak mendukung tag video.
+                </video>
+                <h3 class="video-item-title">Saga Of Tanya</h3>
+                <p class="video-item-description">Episode:{ 4 }</p>
+            </div>
+            <div class="video-item" data-category="tanya">
+<video id="myVideo" controls playsinline preload="none" poster="static/images/poster/poster_tanya.jpeg" width="100%" height="200px">
+                    <source src="https://www.dropbox.com/scl/fi/4lqpptgej8sr6wj2400nz/tanya5.webm?rlkey=3sshpw2i9jekxtl6uks3efd1q&st=16y8ja60&dl=1" type="video/webm">
+                    Browser Anda tidak mendukung tag video.
+                </video>
+                <h3 class="video-item-title">Saga Of Tanya</h3>
+                <p class="video-item-description">Episode:{ 5 }</p>
+            </div>
+            <div class="video-item" data-category="tanya">
+<video id="myVideo" controls playsinline preload="none" poster="static/images/poster/poster_tanya.jpeg" width="100%" height="200px">
+                    <source src="https://www.dropbox.com/scl/fi/t7ak8mb4o37jirmm0uotf/tanya6.webm?rlkey=hx4evren5ooo0l6edq9z43hyz&st=19v9nvdg&dl=1" type="video/webm">
+                    Browser Anda tidak mendukung tag video.
+                </video>
+                <h3 class="video-item-title">Saga Of Tanya</h3>
+                <p class="video-item-description">Episode:{ 6 }</p>
+            </div>
+            <div class="video-item" data-category="tanya">
+<video id="myVideo" controls playsinline preload="none" poster="static/images/poster/poster_tanya.jpeg" width="100%" height="200px">
+                    <source src="https://www.dropbox.com/scl/fi/fax1nj0j4ahz79cpsb1ko/tanya7.webm?rlkey=8khfbmfyp4fa1ch984az9af6j&st=vrgp86ng&dl=1" type="video/webm">
+                    Browser Anda tidak mendukung tag video.
+                </video>
+                <h3 class="video-item-title">Saga Of Tanya</h3>
+                <p class="video-item-description">Episode:{ 7 }</p>
+            </div>
+            <div class="video-item" data-category="tanya">
+<video id="myVideo" controls playsinline preload="none" poster="static/images/poster/poster_tanya.jpeg" width="100%" height="200px">
+                    <source src="https://www.dropbox.com/scl/fi/1ykjqjoit9is7mlcjg7dx/tanya8.webm?rlkey=ga4aq62hp0n7th62trd4qvwjp&st=3zuo95dk&dl=1" type="video/webm">
+                    Browser Anda tidak mendukung tag video.
+                </video>
+                <h3 class="video-item-title">Saga Of Tanya</h3>
+                <p class="video-item-description">Episode:{ 8 }</p>
+            </div>
+            <div class="video-item" data-category="tanya">
+<video id="myVideo" controls playsinline preload="none" poster="static/images/poster/poster_tanya.jpeg" width="100%" height="200px">
+                    <source src="https://www.dropbox.com/scl/fi/uc459kr8rms6ctr1pt19d/tanya9.webm?rlkey=bj1ug3sl0ds90hxvxo2p1mm5p&st=xthm5orj&dl=1" type="video/webm">
+                    Browser Anda tidak mendukung tag video.
+                </video>
+                <h3 class="video-item-title">Saga Of Tanya</h3>
+                <p class="video-item-description">Episode:{ 9 }</p>
+            </div>
+            <div class="video-item" data-category="tanya">
+<video id="myVideo" controls playsinline preload="none" poster="static/images/poster/poster_tanya.jpeg" width="100%" height="200px">
+                    <source src="https://www.dropbox.com/scl/fi/q3990whfqlvl5h2t0sjas/tanya10.webm?rlkey=rmv7658ldc8zwm0owzjd0hw78&st=ypj29b5z&dl=1" type="video/webm">
+                    Browser Anda tidak mendukung tag video.
+                </video>
+                <h3 class="video-item-title">Saga Of Tanya</h3>
+                <p class="video-item-description">Episode:{ 10 }</p>
+            </div>
+            <div class="video-item" data-category="tanya">
+<video id="myVideo" controls playsinline preload="none" poster="static/images/poster/poster_tanya.jpeg" width="100%" height="200px">
+                    <source src="https://www.dropbox.com/scl/fi/vxm6tpffgv37nz34d0l31/tanya11.webm?rlkey=5uvd1y8s71mn49pjug5fvvyue&st=onrndvfk&dl=1" type="video/webm">
+                    Browser Anda tidak mendukung tag video.
+                </video>
+                <h3 class="video-item-title">Saga Of Tanya</h3>
+                <p class="video-item-description">Episode:{ 11 }</p>
+            </div>
+            <div class="video-item" data-category="tanya">
+<video id="myVideo" controls playsinline preload="none" poster="static/images/poster/poster_tanya.jpeg" width="100%" height="200px">
+                    <source src="https://www.dropbox.com/scl/fi/bfo1tmis3rwsxepta5mmy/tanya12.webm?rlkey=jfjpta0yl7lrqe5uz60oh7gh6&st=zqwks0ll&dl=1" type="video/webm">
+                    Browser Anda tidak mendukung tag video.
+                </video>
+                <h3 class="video-item-title">Saga Of Tanya</h3>
+                <p class="video-item-description">Episode:{ 12 }</p>
+            </div>
+        </div>
+    </section>
+<a href="#" id="backToTopBtn" class="back-to-top">⬆️  </a>
+</main>
+                            <footer>
+        <div class="footer-links">
+    <a href="https://www.facebook.com/share/1CQRuBRsAc/" class="nav-button"><i class="fab fa-facebook-f"></i> Facebook</a>
+    <a href="https://pin.it/2AbohMfUX" class="nav-button"><i class="fab fa-pinterest-p"></i> Pinterest</a>
+    <a href="https://www.instagram.com/elaina.chan09?igsh=MXRraGwwNXVqazF6Yg==" target="_blank" class="nav-button"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="https://www.tiktok.com/@elaina.chan459" class="nav-button"><i class="fab fa-tiktok"></i> Tiktok</a>
+    <a href="https://youtube.com/@elainachan09?si=gpZVXnLocXd8eVOu" class="nav-button"><i class="fab fa-youtube"></i> Youtube</a>
+    </div>
+        <p class="copyright-text">
+            &copy; 2025 ZONA ELAINA.
+            <br>
+            <a href="https://www.instagram.com/elaina.chan09?igsh=MXRraGwwNXVqazF6Yg==" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> |
+            <a href="https://t.me/Halo, Saya pakai Telegram untuk chat. Ayo ikutan, unduh di sini: https://telegram.org/dl" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
+        </p>
+    </footer>
+
+    <script src="static/js/script.js"></script>
+    <script src="static/js/icon.js"></script>
+    <script src="static/js/modal.js"></script>
+    <script src="static/js/movies.js"></script>
+    </script>
+</body>
+</html>

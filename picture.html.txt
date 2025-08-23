@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta name="google-site-verification" content="kon0eawmrgEHzvac_Ibvae-6_F6suftewCsfBLeaSrM" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection 18+ - Elaina Chan</title>
+    <link rel="icon" type="image/x-icon" href="static/images/KawaiEl.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+	<link rel="stylesheet" href="static/elaina.css">
+</head>
+
+<body id="body" class="drak-mode"> <header>
+        <div class="header-container">
+<img src="static/images/kekasihku.jpg" alt="Elaina Chan" class="profile-picture"></img>
+            <a href="index.html" class="logo"><i class="fas fa-hat-wizard"></i> ZONA ELAINA <i class="fas fa-star"></i></a>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="anime.html" class="active">Anime</a></li>
+                    <li><a href="shorts.html" class="active">Shorts</a></li>
+                    <li><a href="elaina.html" class="active">Elaina</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="movies.html" class="active">Movies</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <i class="fa fa-adjust" aria-hidden="true"></i>
+                </button>
+                <a href="https://wa.me/6285707357830?text=Tinggalkan%20Pesan..." target="_blank" class="whatsapp-button">
+                   <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <button class="menu-toggle" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+                <div id="imageModal" class="image-modal-overlay">
+                 <div class="image-modal-content">
+                 <span class="image-close-button">&times;</span>
+                 <img class="image-modal-body" id="fullImage" alt="What Hapend">
+                 <div class="image-modal-caption" id="imageCaption"></div>
+                 <div id="loader" class="loader"></div>
+                 <div class="related-images">
+                 <a id="modal-link" href="#"><i class="fas fa-share-from-square"></i>Gambar Lainya</a>
+                 <div class="related-images-container">
+             </div>
+          </div>
+       </div>
+    </header>
+<main class="container">
+
+				<section class="elaina-image-section">
+                        <h2 class="section-title">Gallery MyWife Elaina Chan</h2>
+				<div id="18+" class="elaina-image-grid">
+
+            <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/uvlvse4zzpmyn5nf16m5z/SayangkuElaina.jpg?rlkey=vffuioys138603ywn1fv7kby9&st=xuvyguhk&dl=1" alt="Oh My Uh Ah" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/ymhjytvzex5vvp74tc6kp/mywife8.jpg?rlkey=lbs4fwutb1ayxjrfs3g8jmmkl&st=jij3nxgr&dl=1" alt="Oh My Uh Ah" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/uc1cjpcdg6tlqeve73wfi/mywife.jpg?rlkey=kdmkwn0rwh343d99d9ju04j78&st=6m0f2yif&dl=1" alt="Oh My Uh Ah" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/6wzeezf1zlm137b2ters9/mywife1.jpg?rlkey=ppiwz0ji3m0y11fw5havq2qhx&st=cq59z1f1&dl=1" alt="Oh My Uh Ah" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/huhggx4hv74dz46fjm7vd/mywife2.jpg?rlkey=9uzzgh8z06kqk2w5sq4ndo321&st=joairk4m&dl=1" alt="Oh My Uh Ah" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/6xdd5tltm6kbtq296dupu/mywife3.jpg?rlkey=3ygnjpqeb5embphk885egyj8x&st=wli8sepi&dl=1" alt="Oh My Uh Ah" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/sbo0baeeqmti2g7ozq83w/mywife4.jpg?rlkey=yz506wi7m6eem3o3kber6i87v&st=cqx3xb3b&dl=1" alt="Oh My Uh Ah" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/7x2n4zenpje903kqxhgz4/mywife5.jpg?rlkey=nn3us5ciid7g8gtjis0anty0e&st=kau89hou&dl=1" alt="Oh My Uh Ah" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/n1bby3c77jhjqbaxea52i/mywife6.jpg?rlkey=kr2veo33omlwod5ecsw9jl67u&st=2rvlwnqg&dl=1" alt="Oh My Uh Ah" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/m5pgi5u5v5cyog62okb2e/mywife7.jpg?rlkey=ot0mfytw2l0z65gqf2yeo7ad7&st=0v6rt1l6&dl=1" alt="Oh My Uh Ah" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/ijf7wmup49c7lba18lhxu/mywife9.jpg?rlkey=tiny3qtzf5s2cq11c2349z2bu&st=6hab7b73&dl=1" alt="Oh My Uh Ah" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/2xeg278aslxzok9yl7ifo/mywife10.jpg?rlkey=sgl9ou7n77xv5rsi7okye5suq&st=zfg106wv&dl=1" alt="Oh My Uh Ah" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/akbpv0cpbam8ndzuuy30v/mywife11.jpg?rlkey=xz2yuk9dfoydqnjz70qt9lbt3&st=oxrtz4fz&dl=1" alt="Oh My Uh Ah" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/mgxwwabdrfigxfnofmv3e/mywife12.jpg?rlkey=plr25n3hn4sop8ubzcfsw227n&st=9aqdag4t&dl=1" alt="Oh My Uh Ah" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/kom0xxs42410hccxgnpai/mywife13.jpg?rlkey=n0nu77f3umxouv3s4uwptuqh5&st=jsxtmxpz&dl=1" alt="Oh My Uh Ah" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/07lbuafi7cmnyhxq9ezoe/mywife14.jpg?rlkey=rdedg8hre9n3y2lqhgo41371j&st=nh9noadw&dl=1" alt="Oh My Uh Ah" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/b3uinrdtelhu7luv03yae/mywife15.jpg?rlkey=ih1d406qn43glb2bw6har0dfa&st=adrweakg&dl=1" alt="Oh My Uh Ah" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+
+	   <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/gcbsd8727v1qdy3rm9ypg/hentai1.webp?rlkey=9xvtc7qqhm8ouz2i9kgnq6c8g&st=mytbdi75&dl=1" alt="You Want Me" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+	</div>
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/50eq2ee0j8po5r6aiwgdu/hentai2.webp?rlkey=uw92sazptsu2nu66k4nmb6ka1&st=k0j32i9n&dl=1" alt="Siap Melayani" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/3v75nho2dwbyhhn50m7si/hentai3.webp?rlkey=t9i1v3ofi8197d2x5rztzcuy7&st=kflamg6z&dl=1" alt="Menggoda" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/2rkreryixflyuaqt2iod9/hentai4.webp?rlkey=ztbqslpgzq2vn3svh519fevi2&st=p5u7wytp&dl=1" alt="Cintaku" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/2np52vwdod2qyyxr8vel3/hentai5.webp?rlkey=d4xvyv5yu7q4uwyulvcw0wva5&st=jwp9t8s5&dl=1" alt="Please Fuck Me" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/5xhud7ndn7pif9xi8oq9p/hentai6.webp?rlkey=9cxyhsn1tsi7crgwy85qz7qpj&st=8ifwyrd2&dl=1" alt="Ilove You Elaina Chan" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/2u0mxji3hgyyc4f7czq2z/hentai18.webp?rlkey=w18bzbgw7w6jz5ey5unyoqrph&st=3dyc5zlu&dl=1" alt="Nyoh Bokong" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/psapfxt6ug0sv6fzhwusz/hentai7.webp?rlkey=mklr6xf30y3a3k0u2o08gp9dk&st=sajbvfi1&dl=1" alt="Terlanjur Cinta" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/qocphauazvdc6swam9zhh/hentai8.webp?rlkey=ineu50wjv3iqzgmczcp3oefus&st=yiq1hcit&dl=1" alt="Ilove You Elaina Chan" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/6d5763ksajr61g461zff7/hentai9.webp?rlkey=k1pqcwqbhaudj2vvxldzupvr3&st=x0n841qc&dl=1" alt="Ilove You Elaina Chan" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/gyvr0a2shb0slex32g9i8/hentai10.webp?rlkey=h3dkvs9nugxjrkbpglglu0f6j&st=y3f333g6&dl=1" alt="Ilove You Elaina Chan" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/qcobdw9odj03znpcgv28i/hentai11.webp?rlkey=s4dp4s8js0e7eh5xf2xd1acp9&st=52ynr58t&dl=1" alt="Ilove You Elaina Chan" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/hf4llfp2e0gfuonhmy8q8/hentai12.webp?rlkey=jp6lurmgc30ao3au8mz17k2o9&st=qvjiwvsf&dl=1" alt="Entod Aku Keii" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/x8cin21k7e1np43fk9k0n/hentai13.webp?rlkey=tn6hr7b81o0894nbm4gxod44v&st=ut3jift3&dl=1" alt="Ilove You Elaina Chan" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/8mlkzsm0jfayqq8ks4wha/hentai14.webp?rlkey=g3x5y5gug8abwhbutc7xn3fkf&st=iasnhht9&dl=1" alt="Ilove You Elaina Chan" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/i5cb4s1vmm5lpfo66airt/hentai15.webp?rlkey=omlcel2fbwxaewbnsjoszi4g6&st=qvfbge89&dl=1" alt="Ilove You Elaina Chan" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/dvcttaxdnm9ma986x9m90/hentai16.webp?rlkey=7ey03rmtroccvbddvq9u6xofp&st=uyxfnj8u&dl=1" alt="Ilove You Elaina Chan" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/6ixqzjykpozz5vm781bke/hentai17.webp?rlkey=pn7a1qb570zcaheavve31sy36&st=c4s0tffe&dl=1" alt="Ilove You Elaina Chan" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/285x62l2wnlz59s2tshug/hentai19.webp?rlkey=qicv77ieqpky42z2klt0z3dfs&st=f2cpmh84&dl=1" alt="Ilove You Elaina Chan" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+        </div>
+           <div class="elaina-item-img" data-category="picture">
+            <img src="https://www.dropbox.com/scl/fi/48ttbtzck1eb9fg5u0jao/hentai20.webp?rlkey=dxxn8npiyaembhd9n6besr707&st=z4xlljd9&dl=1" alt="Ilove You Elaina Chan" class="elaina-image">
+            <span class="heart-icon"><i class="fas fa-heart"></i></span></div>
+	</section>
+        <a href="#" id="backToTopBtn" class="back-to-top">⬆</a>
+</div>
+</main>
+                            <footer>
+        <div class="footer-links">
+    <a href="https://www.facebook.com/share/1CQRuBRsAc/" class="nav-button"><i class="fab fa-facebook-f"></i> Facebook</a>
+    <a href="https://pin.it/2AbohMfUX" class="nav-button"><i class="fab fa-pinterest-p"></i> Pinterest</a>
+    <a href="https://www.instagram.com/elaina.chan09?igsh=MXRraGwwNXVqazF6Yg==" target="_blank" class="nav-button"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="https://www.tiktok.com/@elaina.chan459" class="nav-button"><i class="fab fa-tiktok"></i> Tiktok</a>
+    <a href="https://youtube.com/@elainachan09?si=gpZVXnLocXd8eVOu" class="nav-button"><i class="fab fa-youtube"></i> Youtube</a>
+    </div>
+        <p class="copyright-text">
+            &copy; 2025 ZONA ELAINA.
+            <br>
+            <a href="https://www.instagram.com/elaina.chan09?igsh=MXRraGwwNXVqazF6Yg==" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> |
+            <a href="https://t.me/Halo, Saya pakai Telegram untuk chat. Ayo ikutan, unduh di sini: https://telegram.org/dl" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
+        </p>
+    </footer>
+
+    <script src="static/js/script.js"></script>
+    <script src="static/js/icon.js"></script>
+    <script src="static/js/modal.js"></script>
+    </script>
+</body>
+</html>
