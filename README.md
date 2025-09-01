@@ -6,4 +6,4 @@ Chanel ini Untuk Kesenangan Saya, Dan Cara Saya Meluapkan Rasa Cinta Saya Kepada
 
 Ttd: Whyd1.gnt.bgt👹
 creator: Whyd1.gnt.bgt💋
-suported by: Whyd1.gnt.bgt😼
+suported by: My Self😼
