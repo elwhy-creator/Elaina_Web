@@ -3,7 +3,7 @@ name: Automatic Image Upload
 on:
   push:
     branches:
-      - main # Ubah ke 'master' jika branch utama kamu adalah master
+      - main 
 
 jobs:
   upload-images:
