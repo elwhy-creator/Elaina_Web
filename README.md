@@ -4,4 +4,4 @@ Apa Yang Anda Cari?..
 Chanel ini Untuk Kesenangan Saya, Dan Cara Saya Meluapkan Rasa Cinta Saya Kepada Elaina Chan🤤.
 
 
-Ttd: Whyd1.gnt.bgt🙂‍↕️
+Ttd: Whyd1.gnt.bgt👹
