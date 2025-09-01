@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Koleksi Musik">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/x-icon" href="static/images/logo_head.png">
+    <title>Music Player - Whyd1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        :root {
+            --primary-bg: #121212;
+            --secondary-bg: #1e1e1e;
+            --card-bg: #282828;
+            --text-color: #ffffff;
+            --text-light: #b3b3b3;
+            --accent-color: #1db954;
+        }
+
+        /* Light Mode Styles */
+        body.light-mode {
+            --primary-bg: #f0f0f0;
+            --secondary-bg: #e0e0e0;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --text-light: #666666;
+            --accent-color: #1db954;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Container utama dengan Flexbox */
+        .container {
+            display: flex;
+            flex-grow: 1;
+        }
+        
+        /* Tombol Toggle Sidebar */
+        #toggle-sidebar {
+            position: fixed;
+            top: 5px;
+            left: 5px;
+            z-index: 1222;
+            background: none;
+            border: none;
+            color: var(--text-color);
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: color 0.2s;
+	    display: none;
+        }
+        
+        #toggle-sidebar:hover {
+            color: var(--accent-color);
+        }
+
+        /* Gaya Sidebar - Tetap di sisi kiri, tapi tersembunyi */
+        .sidebar {
+            width: 240px; /* Lebar default untuk desktop */
+            flex-shrink: 0;
+            background-color: var(--secondary-bg);
+            padding: 15px;
+	    transition: transform 0.3s ease-in-out;
+            z-index: 1000;
+	}
+        .sidebar.active {
+            transform: translateX(0);
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+	    margin-left: 1rem;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+
+        .nav-links li a {
+            color: var(--text-light);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .nav-links li a:hover {
+            background-color: var(--card-bg);
+            color: var(--text-color);
+        }
+
+        .nav-links li a i {
+            margin-right: 10px;
+        }
+
+        /* Konten utama yang mengisi sisa ruang */
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+            transition: background-color 0.3s;
+            margin-left: 0;
+        }
+        
+        .main-content.shifted {
+            margin-left: 240; /* Adjust content when sidebar is active */
+        }
+
+        .header {
+            margin-bottom: 20px;
+        }
+
+        .playlist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+        }
+
+        .playlist-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 8px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .playlist-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .playlist-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .playlist-card h3 {
+            margin: 10px 0 5px;
+            font-size: 0.9em;
+        }
+
+        .playlist-card p {
+            color: var(--text-light);
+            font-size: 0.8em;
+            margin: 0;
+        }
+
+        .player-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: var(--secondary-bg);
+            border-top: 1px solid #333;
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+            box-sizing: border-box;
+	        z-index: 1020;
+            transition: background-color 0.3s;
+        }
+
+        .song-info {
+            display: flex;
+            align-items: center;
+            width: 250px;
+        }
+
+        .song-info img {
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .text-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #player-title {
+            font-weight: bold;
+            margin: 0;
+            font-size: 0.7em;
+        }
+
+        #player-artist {
+            color: var(--text-light);
+            font-size: 0.6em;
+            margin: 0;
+        }
+
+        .player-controls {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .player-controls button {
+            background: none;
+            border: none;
+            color: var(--text-color);
+            font-size: 1em;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .player-controls button:hover {
+            color: var(--accent-color);
+        }
+
+        .player-progress {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 300px;
+        }
+
+        #progress-container {
+            background-color: #535353;
+            height: 5px;
+            flex-grow: 1;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        body.light-mode #progress-container {
+            background-color: #cccccc;
+        }
+
+        #progress-bar {
+            background-color: var(--accent-color);
+            height: 70%;
+            width: 0%;
+            border-radius: 5px;
+        }
+
+        .search-container {
+            position: relative;
+        }
+
+        .search-container i {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+            pointer-events: none;
+        }
+
+        #searchInput {
+            width: 90%;
+            padding: 8px 15px;
+            padding-right: 20px;
+            border-radius: 20px;
+            border: none;
+            background-color: #333;
+            color: var(--text-color);
+            transition: width 0.3s, background-color 0.3s, color 0.3s;
+        }
+        body.light-mode #searchInput {
+            background-color: #dddddd;
+            color: var(--text-color);
+        }
+
+        #searchInput:focus {
+            width: 92%;
+            outline: none;
+        }
+
+        .save-btn {
+            background: none;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8em;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .save-btn:hover {
+            background-color: var(--accent-color);
+            color: var(--text-color);
+        }
+        
+        .light-mode-toggle {
+            background: none;
+            border: none;
+            color: var(--text-light);
+            cursor: pointer;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .light-mode-toggle:hover {
+            color: var(--text-color);
+        }
+        
+        .light-mode-toggle i {
+            margin-right: 10px;
+        }
+        
+        .back-btn {
+            background-color: var(--card-bg);
+            border: none;
+            color: var(--text-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: background-color 0.2s;
+        }
+        .back-btn:hover {
+            background-color: #383838;
+        }
+	h4 { display: none; }
+	}
+        @media (min-width: 600px) {
+            .player-controls button {
+                font-size: 1.5em;
+            }
+
+            .player-bar {
+                padding: 20px 40px;
+            }
+
+            .song-info {
+                width: 300px;
+            }
+
+            .player-progress {
+                width: 400px;
+            }
+
+            #progress-bar {
+                height: 100%;
+            }
+
+            #searchInput {
+                width: 210px;
+            }
+
+            #searchInput:focus {
+                width: 220px;
+            }
+
+            #player-title {
+                font-size: 1em;
+            }
+
+            #player-artist {
+                font-size: 0.9em;
+            }
+        }
+
+        /* Gaya responsif untuk mobile */
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                position: fixed;
+		left: 0;
+                top: 0;
+                height: 100vh;
+                width: 140px;
+                transform: translateX(-100%);
+                box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+                padding: 15px;
+		z-index: 1200;
+            }
+            .sidebar.open {
+                transform: translateX(0);
+            }
+            .logo img {
+                margin-left: 2rem;
+	    }
+            .nav-links {
+                flex-direction: column;
+                display: flex;
+                flex-grow: 1;
+                justify-content: space-around;
+            }
+            .nav-links {
+                list-style: none;
+                 padding: 0;
+                margin-top: 15px;
+           }
+           .main-content.shifted {
+    	        margin-left: 240;
+ 	   }
+           .nav-links li a {
+                color: var(--text-light);
+                text-decoration: none;
+                display: flex;
+		align-items: center;
+                padding: 10px 15px;
+                border-radius: 5px;
+                transition: background-color 0.2s;
+	   }
+           .nav-links li a:hover {
+		background-color: var(--card-bg);
+                color: var(--text-color);
+           }
+
+           .nav-links li a i {
+                margin-right: 10px;
+           }
+            .main-content { 
+		padding: 10px;
+            }
+            .player-bar {
+                padding: 0;
+		z-index: 1320;
+            }
+            .song-info {
+                width: 100%;
+                justify-content: center;
+            }
+            .player-controls {
+                margin-top: 10px;
+                width: 50%;
+                justify-content: center;
+            }
+            .player-progress {
+                width: 50%;
+                margin-top: 10px;
+            }
+	    #searchInput {
+		width: 120px;
+	    }
+            #searchInput:focus {
+               width: 125px;
+	    }
+	    #toggle-sidebar {
+		display: block;
+	    }
+        }
+    </style>
+</head>
+<body>
+    <button id="toggle-sidebar"><i class="fas fa-bars""></i></button>
+
+    <div class="container">
+        <aside class="sidebar">
+            <a class="logo" href="#">
+                <img src="static/images/logo.png" alt="Logo Akatsuki">
+            </a>
+            <button id="lightModeToggle" class="light-mode-toggle" aria-label="Toggle light mode">
+                    <i class="fa fa-adjust" aria-hidden="true"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#" id="homeBtn"><i class="fas fa-home"></i> Home</a></li>
+                <li>
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="Cari lagu...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </li>
+		        <li><a href="#" id="libraryBtn"><i class="fas fa-list"></i> Your Library</a></li>
+                <li><a href="auth" class="dropdown-item"><i class="fab fa-google"></i>Login</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div id="home-view">
+                <div class="header">
+                    <h2></h2>
+                </div>
+                <div class="playlist-grid" id="playlist-grid">
+                </div>
+            </div>
+            
+            <div id="songs-view" style="display: none;">
+                <button id="backBtn" class="back-btn"><i class="fas fa-arrow-left"></i> Kembali ke Playlist</button>
+                <div class="header">
+                    <h2 id="current-playlist-title"></h2>
+                </div>
+                <div class="playlist-grid" id="songs-grid">
+                </div>
+            </div>
+
+            <div id="library-view" style="display: none;">
+                <div class="header">
+                    <h2>Your Library</h2>
+                </div>
+                <div class="playlist-grid" id="library-grid">
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="player-bar">
+        <div class="song-info">
+            <img id="player-cover" src="static/images/PosterMusikPlayer.png" alt="Album Cover">
+            <div class="text-info">
+                <p id="player-title">Whyd1</p>
+                <p id="player-artist">My Song Your Song</p>
+            </div>
+        </div>
+        <div class="player-controls">
+            <button id="prev-btn"><i class="fas fa-backward"></i></button>
+            <button id="play-pause-btn"><i class="fas fa-play"></i></button>
+            <button id="next-btn"><i class="fas fa-forward"></i></button>
+        </div>
+        <div class="player-progress">
+            <span id="current-time">0:00</span>
+            <div id="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+            <span id="duration-time">0:00</span>
+        </div>
+    </div>
+
+    <audio id="audio-player" src="https://www.dropbox.com/scl/fi/ausi9vifejnhl09drfxno/ITACHI-1k6O2PoG6WE-_20250827_135254.mp3?rlkey=4mslcid619o9e5ufe73k1nmd7&st=k8c2z990&raw=1"></audio>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+<script src="static/js/database.js"></script>
+<script>
+    const allSongs = [
+        { id: "song-1", title: "Can You Fell My Heart", artist: "Bringme The Horizon", cover: "https://www.dropbox.com/scl/fi/052nkpaj7kqe21u16aozf/Can_You_Feel_My_Heart_poster.jpg?rlkey=9eyff4djc09qgteqsc3d1oxq3&st=2jk7rth0&dl=1", audio: "https://www.dropbox.com/scl/fi/mlqpg80bt4ftuam0zavo2/Bring-Me-The-Horizon-Can-You-Feel-My-Heart.mp3?rlkey=fqtd1balk00cwq8yp9mjvp9i9&st=txcxgh41&raw=1" },
+        { id: "song-2", title: "Sempiternal", artist: "Bringme The Horizon", cover: "https://www.dropbox.com/scl/fi/yf0gt7l4e3g5q4ob03c0d/Sempiternal_poster.jpg?rlkey=kyuot2c0lzeyzbh8tdnnsqabf&st=ix8p9bxy&dl=1", audio: "https://www.dropbox.com/scl/fi/gvq616241pp6lne8h4vgv/Bring-Me-the-Horizon-Sempiternal.mp3?rlkey=2t5ocw9nw2by6h3dzdjf084fx&st=qnn16i0m&raw=1" },
+        { id: "song-3", title: "Bleed Out", artist: "Within Temptation", cover: "https://www.dropbox.com/scl/fi/5oso3ua1qmtzu6lszsd9n/Bleed_Out_poster.jpg?rlkey=9hqf5emilmwo911ivle7ga42i&st=ov59uv7h&dl=1", audio: "https://www.dropbox.com/scl/fi/csid85jhgxkrdl3h8utyh/Within-Temptation-Bleed-Out.mp3?rlkey=0fp5pwg8eu8a9rg29av6ramch&st=f56wpkt1&raw=1" },
+        { id: "song-4", title: "Lost In Paradise", artist: "Ali Feat Aklo", cover: "https://www.dropbox.com/scl/fi/jla1345z78s0mvlq9echn/Lost_In_Paradise_poster.jpg?rlkey=p7c6yjnuvfxiwa1vna34zdj0u&st=yj6r9gm2&dl=1", audio: "https://www.dropbox.com/scl/fi/kmn0ppxw5ppnqgozbhdsx/Ali-feat-Aklo-Lost-In-Paradise.mp3?rlkey=j50p9ur2fmitsqw5xahvmjr23&st=k9n09oea&raw=1" },
+        { id: "song-5", title: "KingsBlood", artist: "KALA", cover: "https://www.dropbox.com/scl/fi/fbv25b2gmg2rh2gzg3abq/KINGSBLOOD_poster.jpg?rlkey=xb1ereat3effaegphkj9mpi85&st=5dxjt0nb&dl=1", audio: "https://www.dropbox.com/scl/fi/a3ta699vzjubjn7zpz289/KALA-KINGSBLOOD.mp3?rlkey=nxkosarj7elq8drbbrybdg9fb&st=uy46bv25&raw=1" },
+        { id: "song-6", title: "Literature", artist: "Reina Ueda", cover: "https://www.dropbox.com/scl/fi/lyurcqwf3b7ndmhp8lcw7/Literature_poster.jpg?rlkey=kaanr95vbxsszq0q1c7wepq9h&st=cndjy4gt&dl=1", audio: "https://www.dropbox.com/scl/fi/k77e4kjjxy8ngvo6jk310/Reina-Ueda-Literature.mp3?rlkey=eqf4aqg7sjhtv7yogh7sj9tzv&st=yeys34eq&raw=1" },
+        { id: "song-7", title: "Stay With Me", artist: "Miki Matsubara", cover: "https://www.dropbox.com/scl/fi/6rjilpazh9nw5kt7uy377/Stay_With_Me_poster.jpg?rlkey=tmfcdy4oockuitfn865p9htba&st=h4am0z28&dl=1", audio: "https://www.dropbox.com/scl/fi/v3h62rsts1cypcxkrjte2/Miki-Matsubara-Stay-With-Me.mp3?rlkey=l828f4ybn52dg6htnahj4a13y&st=lhsfc7hf&raw=1" },
+        { id: "song-8", title: "Bang Bang Born", artist: "Creepy Nuts", cover: "https://www.dropbox.com/scl/fi/gnx25em0adsp0istlysl3/Bang_Bang_Born_poster.jpg?rlkey=sfoc7crb0v3b1nvntc8d7q8y4&st=yf8s1yuz&dl=1", audio: "https://www.dropbox.com/scl/fi/0h724yvyl1c2qsvfv8ab6/Creepy-Nuts-Bang-Bang-Born.mp3?rlkey=qoohoj1pv7peefybui5ylswl5&st=98o16ys1&raw=1" },
+        { id: "song-9", title: "Hikigane", artist: "Goodbye Setsuna", cover: "https://www.dropbox.com/scl/fi/3vo5ed28ivml7hbx5iz9r/Hikigane_poster.jpg?rlkey=w34wyh65gs26l1somxbrouvf7&st=26a5vtvs&dl=1", audio: "https://www.dropbox.com/scl/fi/uclv400m77pg6hd6mjw9g/Goodbyee-Setsuna-Hikigane.mp3?rlkey=ajnomit2h08ieq3ie221tsvu0&st=w0yfxflo&raw=1" },
+        { id: "song-10", title: "Tower Of Flower", artist: "Sayuri", cover: "https://www.dropbox.com/scl/fi/hntmme2sxcowju8x3p8uq/Tower_Of_Flower_poster.jpg?rlkey=eghmmhnb5yj0x1gwhu2nejvn6&st=mc6bij6r&dl=1", audio: "https://www.dropbox.com/scl/fi/ozznhrkiuofilqbbirdxp/Sayuri-Tower-Of-Flower.mp3?rlkey=h31stnepnjn87rec6jeaukog5&st=2dw4dygn&raw=1" },
+        { id: "song-11", title: "GodKnows", artist: "Aya Hirano", cover: "https://www.dropbox.com/scl/fi/plkpzhl5seawvgsiedms9/Godknows_poster.jpg?rlkey=48ju7dg88jeqc9clrksj2ywf2&st=dug11jrw&dl=1", audio: "https://www.dropbox.com/scl/fi/dfejknjob081xcp28oxjx/Aya-Hirano-Godknows.mp3?rlkey=zpz0hblp4d7my65m9kwlpqsqq&st=0dfeoadr&raw=1" },
+        { id: "song-12", title: "Skyfall", artist: "Attack On Titan Version", cover: "https://www.dropbox.com/scl/fi/8oh6b6mir3pycrtx4l7fw/Skyfall_poster.jpg?rlkey=80nzome7e2mt3k1hhhmr1i0km&st=dbl336iy&dl=1", audio: "https://www.dropbox.com/scl/fi/94eanr9jlhdubhj9zj5rr/Attack-on-Titan-Skyfall.mp3?rlkey=7gnohud05zzg9s7rpsmzfniwo&st=ou6ihneh&raw=1" },
+        { id: "song-13", title: "Call Your Name", artist: "Attack On Titan Ost", cover: "https://www.dropbox.com/scl/fi/jvkcys8arxo4gylfblj1s/Call_your_name_poster.jpg?rlkey=x6fx8hz4wmyxt9a0dpymkst4g&st=5qna2ic8&dl=1", audio: "https://www.dropbox.com/scl/fi/p6xliyrnm9yov127t9i0o/Attack-on-Titan-OST-Call-your-name.mp3?rlkey=cat154nmq35rf5252s1dg9wb5&st=8oehar32&raw=1" },
+        { id: "song-14", title: "BlueBird", artist: "Ikimono Gakari", cover: "https://www.dropbox.com/scl/fi/r9vnlt2g4sydteg304epl/Bluebird_poster.jpg?rlkey=cil12pz3kpv9tuia2v826eh6u&st=nernj7r4&dl=1", audio: "https://www.dropbox.com/scl/fi/h7i4po8s81xh0wl1h75k0/Ikimono-Gakari-Bluebird.mp3?rlkey=b3rljbnp8vgc3l05ugvx9zb39&st=q1w027bo&raw=1" },
+        { id: "song-15", title: "Kanashimi", artist: "Litle By Litle", cover: "static/naruto/narutokun.jpeg", audio: "https://www.dropbox.com/scl/fi/vs3sznwjcwkgz0oumc31v/Litle-By-Litle-Kanashimi.mp3?rlkey=nut3ff1g6spe23cro3w2h5btj&st=m0l6769y&raw=1" },
+        { id: "song-16", title: "Sunny", artist: "Yourushika", cover: "https://www.dropbox.com/scl/fi/2up82fljihxqr1q7hmwwm/Sunny_poster.jpg?rlkey=0ruhsdq6q7x8o0lr1r10a4cld&st=vfzg7wxz&dl=1", audio: "https://www.dropbox.com/scl/fi/2ea1dcgeeuvlnh44d6nvn/Yorushika-Sunny.mp3?rlkey=fjr17964k1hdm4w06y6d487fy&st=l54axjjd&raw=1" },
+        { id: "song-17", title: "Martian", artist: "Yourushika", cover: "https://www.dropbox.com/scl/fi/0yvffvm67si5v7spb2ho2/Martian_poster.jpg?rlkey=k9wek624131z8p2cv8b3340z5&st=8mwrcp36&dl=1", audio: "https://www.dropbox.com/scl/fi/zglg2ip8lo4uyno7f24mv/Yorushika-Martian.mp3?rlkey=tn7jk4zr5akrjqx86cn9dy0a4&st=bsgkpr6a&raw=1" },
+        { id: "song-18", title: "Gurenge", artist: "Lisa", cover: "https://www.dropbox.com/scl/fi/isnwlmpwdspz0u5s8ght4/Gurenge_poster.jpg?rlkey=vnqf8i7y6w1kk1f00i9nfeykj&st=ha50qdr9&dl=1", audio: "https://www.dropbox.com/scl/fi/ds3ugeisa5bklovmouaic/LISA-Gurenge.mp3?rlkey=9ybhj5uup6yy6mpzbh6dez3sa&st=a83wtuz5&raw=1" },
+        { id: "song-19", title: "Nezuko No Uta", artist: "Nami Nakagawa", cover: "https://www.dropbox.com/scl/fi/uarxf5s2cm6eaicf4ss89/Nezuko_No_Uta_poster.jpg?rlkey=56qi3q59w521cwbrbga9bbqoi&st=3rmflhu5&dl=1", audio: "https://www.dropbox.com/scl/fi/2wxlpdhfewgfv3vinufg9/Go-Shina-Nezuko-No-uta.mp3?rlkey=ks9di45nsigzznf2ozwza5cm1&st=wli4qgb2&raw=1" },
+        { id: "song-20", title: "Tanjiro No Uta", artist: "Nami Nakagawa", cover: "https://www.dropbox.com/scl/fi/0sfynm3bwccx5vvdicvh8/Tanjiro_No_Uta_poster.jpg?rlkey=7v52jrv0l4ig4t8xvn2b6d975&st=hd2jupwi&dl=1", audio: "https://www.dropbox.com/scl/fi/l8anm4rzifqcc8w23tqfk/Nami-Nakagawa-Tanjiro-No-Uta.mp3?rlkey=of5jsqsmt33x56sxegvpaxc7w&st=4czptpo1&raw=1" },
+        { id: "song-21", title: "ODD FUTURE", artist: "Unknown", cover: "https://www.dropbox.com/scl/fi/us320rfs3qcmhof9iiubj/ODD_FUTURE_poster.jpg?rlkey=t9rjfpqsptp84d3iyq15mve2d&st=45myoscb&dl=1", audio: "https://www.dropbox.com/scl/fi/sa9lmegz4p1o82nzqlwfs/ODD-FUTURE.mp3?rlkey=qkq48q9v2977zo58lrfgoaqnx&st=8s11yvyv&raw=1" },
+        { id: "song-22", title: "Idol", artist: "Yoasobi", cover: "https://www.dropbox.com/scl/fi/r6gjyepdigath2vj9xp9n/Idol_poster.jpg?rlkey=m78zccy70syqruwwdq9dd3i16&st=uj41e3q3&dl=1", audio: "https://www.dropbox.com/scl/fi/c6a6827telwpf8tnxw53n/YOASOBI-Idol.mp3?rlkey=6t30loh9j74to3o8i1f9esor7&st=9uufzgyu&raw=1" },
+        { id: "song-23", title: "Unravel", artist: "Toru Kitajima", cover: "https://www.dropbox.com/scl/fi/cb3o0p3y6db61jyktcuu2/Unravel_poster.jpg?rlkey=v7y9izojufvnd33fram364z6v&st=l3bk4hrr&dl=1", audio: "https://www.dropbox.com/scl/fi/jx1v0hn2jfzsv5glxh8z0/Toru-Kitajima-Unravel.mp3?rlkey=n6knfkqf5lfarucled6pyr4ip&st=6kp9s9wb&raw=1" },
+        { id: "song-24", title: "After The Dark", artist: "Sweather Weather", cover: "https://www.dropbox.com/scl/fi/8wasjznx14z81blnfulhk/After_The_Dark_poster.jpg?rlkey=hga1396paugifrloq5ahvv0sd&st=hoj3fdwu&dl=1", audio: "https://www.dropbox.com/scl/fi/pt0qwoc77c5whl6umm9ty/Sweater-Weather-After-The-Dark.mp3?rlkey=w62t3mn6p3iv41f8hdu45yus3&st=fi83pnsi&raw=1" },
+        { id: "song-25", title: "Stay Alife", artist: "Unknown", cover: "https://www.dropbox.com/scl/fi/gmyqybiqynmqkzfyo392a/Stay_Alive_poster.jpg?rlkey=52jdeiwvz5w87wf23tm0rk1kq&st=xm4udrge&dl=1", audio: "https://www.dropbox.com/scl/fi/epj64bbb112prra9q9ma3/Stay-Alive.mp3?rlkey=3s3ls1cx102xac4vdi0ph59dw&st=fqor05f3&raw=1" },
+        { id: "song-26", title: "Cruel Night", artist: "Lisa", cover: "https://www.dropbox.com/scl/fi/r93689m4niznciotbhakw/Shine_in_the_Cruel_Night_poster.jpg?rlkey=44krkm456sf9lqhlv5xzp5tdq&st=f7v4eu51&dl=1", audio: "https://www.dropbox.com/scl/fi/blyay0tlz5nxf002cg9om/LISA-Shine-in-the-Cruel-Night.mp3?rlkey=dga4ymssc5qbyhm1tey70sgfq&st=d7g8tsc8&raw=1" },
+        { id: "song-27", title: "Koi No Uta", artist: "Unknown", cover: "https://www.dropbox.com/scl/fi/2mrdoz2clmf34jd7xwu05/Koino_Uta_poster.jpg?rlkey=xmcb9horyel9l9w7zhj2n45mv&st=tvfusfe0&dl=1", audio: "https://www.dropbox.com/scl/fi/8k2xee0k7q9aiinigyyi2/Koino_Uta.mp3?rlkey=mi3isir9rrqqpak02mkjjptyh&st=xbmyk204&raw=1" },
+        { id: "song-28", title: "Shinsho Wo Sasageyo", artist: "Linked Horizon", cover: "https://www.dropbox.com/scl/fi/jg3jlfeswnyxdaw3ddjle/sasageyo_poster.jpg?rlkey=7i88zixrlhgoz78o4dk13nzlo&st=ho1la78z&dl=1", audio: "https://www.dropbox.com/scl/fi/8o4iruyu3382pqpqnajb0/sasageyo.mp3?rlkey=78rx44fyoxncuc30lgrjrgjzx&st=6rt2txnc&raw=1" },
+        { id: "song-29", title: "Paradisus-Paradoxum", artist: "Myth & Roid", cover: "https://www.dropbox.com/scl/fi/bjj2nj2rsytrtu2oxgsvf/Paradoxum_poster.jpg?rlkey=098mkoazfiq382mearrp3xfyf&st=ph93buf2&dl=1", audio: "https://www.dropbox.com/scl/fi/j137lliy1smrmag0ve0cy/MYTH-ROID-Paradoxum.mp3?rlkey=473gr5t7a88qv55xuax7u022n&st=tjyrgi5g&raw=1" },
+        { id: "song-30", title: "Styx Helix", artist: "Myth & Roid", cover: "https://www.dropbox.com/scl/fi/n17ec5j39mu9x8zsbtwkr/STYX_HELIX_poster.jpg?rlkey=p6lzawzfsxizib968x8w37uqp&st=vnr8cyzc&dl=1", audio: "https://www.dropbox.com/scl/fi/5s4kv2xfhn7fpo5p50eby/MYTH-ROID-STYX_HELIX.mp3?rlkey=il2fyxxaxn8uiw85easuy4okq&st=rl9yfmc2&raw=1" },
+        { id: "song-31", title: "Suzume", artist: "Toaka", cover: "https://www.dropbox.com/scl/fi/ifofgzp82ks4t46ilkz8n/Suzume_poster.jpg?rlkey=k34ze36ymfr2yg8ku0t8et41z&st=uys2h46p&dl=1", audio: "https://www.dropbox.com/scl/fi/1q9byvaovokgx7atu41fn/Toaka-Suzume.mp3?rlkey=6yzyaapxllbzwk6exnwgxyi02&st=vaxe2pck&raw=1" },
+        { id: "song-32", title: "Sign", artist: "Flow", cover: "https://www.dropbox.com/scl/fi/uxm2uc47o6k49hp530tol/Flow_poster.jpeg?rlkey=cdesdqhco7jgwg808sz5mph7c&st=jtu0yc1s&dl=1", audio: "https://www.dropbox.com/scl/fi/uvnt3fu96h3z83s5u2c00/FLOW-Sign.mp3?rlkey=5v3k1adhuzy60q3n6nxxjvphh&st=y1i0i6a3&raw=1" },
+        { id: "song-33", title: "Moshimo - Op12", artist: "Daisuke", cover: "https://www.dropbox.com/scl/fi/uqtnvudei4yn5071lzmyc/Naruto_Musik_poster-1.png?rlkey=ntq9vxbee1ifbgsbegx1aeqnq&st=hzcnc71q&dl=1", audio: "https://www.dropbox.com/scl/fi/4oyf7wxcm3rf30efqobrt/Naruto-Op-Opening-12.mp3?rlkey=ohseqr4rueoupze3ywxyrkg2e&st=90k8evpn&dl=1" },
+        { id: "song-34", title: "Hero's Come Back", artist: "Naruto Op 1", cover: "https://www.dropbox.com/scl/fi/uqtnvudei4yn5071lzmyc/Naruto_Musik_poster-1.png?rlkey=ntq9vxbee1ifbgsbegx1aeqnq&st=jkasknzv&dl=1", audio: "https://www.dropbox.com/scl/fi/2r5pem7twjmojttb2mi9b/Naruto-Opening-1-Hero-s-Come-Back.mp3?rlkey=dyh5dsbqtyieb2gb4z67h4evp&st=jkasknzv&raw=1" },
+        { id: "song-35", title: "A World", artist: "Naruto Op 7", cover: "https://www.dropbox.com/scl/fi/uqtnvudei4yn5071lzmyc/Naruto_Musik_poster-1.png?rlkey=ntq9vxbee1ifbgsbegx1aeqnq&st=jkasknzv&dl=1", audio: "https://www.dropbox.com/scl/fi/bruk2bxp8qa3ny8qjgk3c/Naruto-Opening-7-A-World-That-Was-Transparent.mp3?rlkey=vljd4n1y9guy3qr2ev3m54y65&st=hmcv0yzy&raw=1" },
+        { id: "song-36", title: "City Lights", artist: "Flow", cover: "https://www.dropbox.com/scl/fi/uqtnvudei4yn5071lzmyc/Naruto_Musik_poster-1.png?rlkey=ntq9vxbee1ifbgsbegx1aeqnq&st=jkasknzv&dl=1", audio: "https://www.dropbox.com/scl/fi/0c2w9rurqjj5m6qe2b7aw/Naruto-AMV-The-Way-Of-Hokage.mp3?rlkey=pg6s93tyersn1optqnl7kwlq1&st=wrrzdfah&raw=1" },
+        { id: "song-37", title: "Alive", artist: "Naruto Ending 4", cover: "https://www.dropbox.com/scl/fi/uqtnvudei4yn5071lzmyc/Naruto_Musik_poster-1.png?rlkey=ntq9vxbee1ifbgsbegx1aeqnq&st=jkasknzv&dl=1", audio: "https://www.dropbox.com/scl/fi/19xx9ebnbwpkg2rz3ax59/Naruto-Ending-4-Alive.mp3?rlkey=k2nv3skhn00c0ykqmbxcgo4sm&st=dl4d56po&raw=1" },
+        { id: "song-38", title: "Tacica", artist: "New Songs", cover: "https://www.dropbox.com/scl/fi/uqtnvudei4yn5071lzmyc/Naruto_Musik_poster-1.png?rlkey=ntq9vxbee1ifbgsbegx1aeqnq&st=6h27ij6y&raw=1", audio: "https://www.dropbox.com/scl/fi/g01fsk41u20jn9e8c8bz5/tacica-Newsong.mp3?rlkey=8a9p4i2rkblt6snn55odgrmnz&st=6h27ij6y&raw=1" },
+        { id: "song-39", title: "Silhouette", artist: "Kana Boon", cover: "https://www.dropbox.com/scl/fi/uqtnvudei4yn5071lzmyc/Naruto_Musik_poster-1.png?rlkey=ntq9vxbee1ifbgsbegx1aeqnq&st=6h27ij6y&raw=1", audio: "https://www.dropbox.com/scl/fi/g726czyvhyuz0se8iaccz/KANA-BOON-Silhouette.mp3?rlkey=l9jph2ev5fqftk1o0ebsny5l3&st=vknzn4xx&raw=1" },
+        { id: "song-40", title: "Ame Wo Matsu", artist: "Minami", cover: "https://www.dropbox.com/scl/fi/z5lwrw53mu1570u0uwyaa/amewomatsu_cover.jpeg?rlkey=7wzsacyb9aw4jstg4c02wo8a8&st=6ylrzzwl&dl=1", audio: "https://www.dropbox.com/scl/fi/by8tgngsefgf9n36zl7do/Ame-Wo-Matsu-TFALdg7HUJU.mp3?rlkey=ulq0khitoj2tw57yrndnvuvfh&st=i4cphv5v&raw=1" },
+        { id: "song-41", title: "Hail To The King", artist: "Avenged Sevenfold", cover: "https://www.dropbox.com/scl/fi/t21vehee0ojh0t20zrdhx/HailToTheKing_poster.jpeg?rlkey=kxfh8m77f3myvynkj67gt3ifb&st=5zrslg3i&dl=1", audio: "https://www.dropbox.com/scl/fi/dwmp1s0m8l41ds6nvplai/Hail-to-the-King-MjwttGizNEs.mp3?rlkey=57b10rmv4xsamouc13257liue&st=phaa15x4&raw=1" },
+        { id: "song-42", title: "Hunting Soul", artist: "DanDaDan OST", cover:"https://www.dropbox.com/scl/fi/q5cm0nwj8nzj0r7jc643l/DanDaDan_poster-1.webp?rlkey=53wp3ni9tgx8i77hh9w1gh0yu&st=0g1gw8et&dl=1", audio: "https://www.dropbox.com/scl/fi/7e5ba78ptnc3z88z55ays/Hunting-Soul-K4hNyARBf28.mp3?rlkey=0dqbc0465ijm5ipe5q6jasxp4&st=s4qu7key&raw=1" },
+        { id: "song-43", title: "Hey Kids", artist: "The Oral Cigarettes", cover: "https://www.dropbox.com/scl/fi/0j6fmh5mw2x6l9vn2rw20/Heykids_poster.jpeg?rlkey=73m6bur7pe1nhzlzrzsdbxwn1&st=4cubbuq9&dl=1", audio: "https://www.dropbox.com/scl/fi/2zqrh37kuor1pknwtnnz5/Hey-Kids-skilutORMZM.mp3?rlkey=64y9tter3x2w78n73c64tmxnq&st=rr52xzdl&raw=1" }
+    ];
+
+    const playlistsData = [
+        {
+            id: "playlist-1",
+            title: "Op &Ending Naruto",
+            cover: "static/images/Cover_playlist1.png",
+            songs: ["song-39", "song-14", "song-15", "song-32", "song-33", "song-34", "song-35", "song-36", "song-37", "song-38"]
+        },
+        {
+            id: "playlist-2",
+            title: "Anime Songs",
+            description: "",
+            cover: "static/images/Cover_playlist2.png",
+            songs: ["song-4", "song-5", "song-6", "song-7", "song-42", "song-43", "song-8", "song-9", "song-10", "song-11", "song-12", "song-23", "song-13", "song-28", "song-22", "song-16", "song-17", "song-18", "song-19", "song-20"]
+        },
+        {
+            id: "playlist-3",
+            title: "Child",
+            description: "Musik santai untuk menemani aktivitas.",
+            cover: "static/images/Cover_playlist3.png",
+            songs: ["song-21", "song-7", "song-24", "song-25", "song-26", "song-40",  "song-27", "song-29", "song-30", "song-31"]
+        },
+        {
+            id: "playlist-4",
+            title: "Best of Rock",
+            description: "Koleksi lagu rock yang membangkitkan semangat.",
+            cover: "static/images/Cover_playlist4.png",
+            songs: ["song-1", "song-2", "song-3", "song-41"]
+        }
+    ];
+
+    // Dapatkan referensi elemen HTML
+    const audioPlayer = document.getElementById('audio-player');
+    const playPauseBtn = document.getElementById('play-pause-btn');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const playerCover = document.getElementById('player-cover');
+    const playerTitle = document.getElementById('player-title');
+    const playerArtist = document.getElementById('player-artist');
+    const progressBar = document.getElementById('progress-bar');
+    const progressContainer = document.getElementById('progress-container');
+    const currentTimeEl = document.getElementById('current-time');
+    const durationTimeEl = document.getElementById('duration-time');
+    const playlistGrid = document.getElementById('playlist-grid');
+    const songsGrid = document.getElementById('songs-grid');
+    const currentPlaylistTitle = document.getElementById('current-playlist-title');
+    const libraryGrid = document.getElementById('library-grid');
+    const searchInput = document.getElementById('searchInput');
+    const homeBtn = document.getElementById('homeBtn');
+    const libraryBtn = document.getElementById('libraryBtn');
+    const backBtn = document.getElementById('backBtn');
+    const homeView = document.getElementById('home-view');
+    const songsView = document.getElementById('songs-view');
+    const libraryView = document.getElementById('library-view');
+    const lightModeToggle = document.getElementById('lightModeToggle');
+    const toggleSidebarBtn = document.getElementById('toggle-sidebar');
+    const sidebar = document.querySelector('.sidebar');
+    const mainContent = document.querySelector('.main-content');
+
+    let currentSongIndex = 0;
+    let isPlaying = false;
+    let currentSongsList = [];
+
+    // Fungsi untuk memuat lagu
+    const loadSong = (index) => {
+        const song = currentSongsList[index];
+        if (!song) return;
+        audioPlayer.src = song.audio;
+        playerCover.src = song.cover;
+        playerTitle.textContent = song.title;
+        playerArtist.textContent = song.artist;
+    };
+
+    // Fungsi untuk mengontrol play/pause
+    const playPause = () => {
+        if (isPlaying) {
+            audioPlayer.pause();
+            playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+        } else {
+            audioPlayer.play();
+            playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+        }
+        isPlaying = !isPlaying;
+    };
+
+    // Fungsi untuk memutar lagu selanjutnya
+    const nextSong = () => {
+        currentSongIndex = (currentSongIndex + 1) % currentSongsList.length;
+        loadSong(currentSongIndex);
+        if (isPlaying) audioPlayer.play();
+    };
+
+    // Fungsi untuk memutar lagu sebelumnya
+    const prevSong = () => {
+        currentSongIndex = (currentSongIndex - 1 + currentSongsList.length) % currentSongsList.length;
+        loadSong(currentSongIndex);
+        if (isPlaying) audioPlayer.play();
+    };
+
+    // Event listener untuk tombol kontrol
+    playPauseBtn.addEventListener('click', playPause);
+    nextBtn.addEventListener('click', nextSong);
+    prevBtn.addEventListener('click', prevSong);
+    audioPlayer.addEventListener('ended', nextSong);
+
+    // Fungsi untuk memperbarui progress bar dan waktu
+    const updateProgress = () => {
+        const { duration, currentTime } = audioPlayer;
+        const progressPercent = (currentTime / duration) * 100;
+        if (!isNaN(progressPercent)) {
+            progressBar.style.width = `${progressPercent}%`;
+        }
+
+        let minutes = Math.floor(currentTime / 60);
+        let seconds = Math.floor(currentTime % 60);
+        if (seconds < 10) seconds = '0' + seconds;
+        currentTimeEl.textContent = `${minutes}:${seconds}`;
+
+        let durationMinutes = Math.floor(duration / 60);
+        let durationSeconds = Math.floor(duration % 60);
+        if (durationSeconds < 10) durationSeconds = '0' + durationSeconds;
+        if (!isNaN(durationMinutes)) {
+            durationTimeEl.textContent = `${durationMinutes}:${durationSeconds}`;
+        }
+    };
+    audioPlayer.addEventListener('timeupdate', updateProgress);
+
+    // Fungsi untuk mengatur progress bar saat diklik
+    progressContainer.addEventListener('click', (e) => {
+        const width = progressContainer.clientWidth;
+        const clickX = e.offsetX;
+        const duration = audioPlayer.duration;
+        audioPlayer.currentTime = (clickX / width) * duration;
+    });
+
+    // Fungsi untuk menampilkan daftar playlist di halaman utama
+    const displayPlaylists = (playlists, container) => {
+        container.innerHTML = '';
+        playlists.forEach(playlist => {
+            const card = document.createElement('div');
+            card.classList.add('playlist-card');
+            card.innerHTML = `
+                <img src="${playlist.cover}" alt="Playlist Cover">
+                <h3>${playlist.title}</h3>
+                <h4>${playlist.description}</h4>
+            `;
+            card.addEventListener('click', () => {
+                showSongsInPlaylist(playlist);
+            });
+            container.appendChild(card);
+        });
+    };
+
+    // Fungsi untuk menampilkan lagu-lagu di dalam playlist yang diklik
+    const showSongsInPlaylist = (playlist) => {
+        homeView.style.display = 'none';
+        libraryView.style.display = 'none';
+        songsView.style.display = 'block';
+        
+        currentPlaylistTitle.textContent = playlist.title;
+        songsGrid.innerHTML = '';
+        
+        const songs = playlist.songs.map(songId => allSongs.find(song => song.id === songId)).filter(Boolean);
+        currentSongsList = songs;
+
+        songs.forEach((song, index) => {
+            const card = document.createElement('div');
+            card.classList.add('playlist-card');
+            card.dataset.id = song.id;
+            card.innerHTML = `
+                <img src="${song.cover}" alt="Album Cover">
+                <h3>${song.title}</h3>
+                <p>${song.artist}</p>
+                <button class="save-btn">Simpan ke Library</button>
+            `;
+            card.addEventListener('click', () => {
+                currentSongIndex = index;
+                loadSong(currentSongIndex);
+                if (!isPlaying) {
+                    playPause();
+                } else {
+                    audioPlayer.play();
+                }
+            });
+            
+            const saveBtn = card.querySelector('.save-btn');
+            saveBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                saveToLibrary(song);
+            });
+            songsGrid.appendChild(card);
+        });
+    };
+
+    const showHome = () => {
+        homeView.style.display = 'block';
+        songsView.style.display = 'none';
+        libraryView.style.display = 'none';
+        displayPlaylists(playlistsData, playlistGrid);
+    };
+
+    const showLibrary = () => {
+        homeView.style.display = 'none';
+        songsView.style.display = 'none';
+        libraryView.style.display = 'block';
+        // loadLibrary(); // Uncomment this line if you have Firebase configured
+        const dummyLibrary = allSongs.filter(song => song.artist === "Ikimono Gakari"); // Dummy data for demonstration
+        displaySongs(dummyLibrary, libraryGrid);
+    };
+
+    const displaySongs = (songs, container) => {
+        container.innerHTML = '';
+        songs.forEach((song, index) => {
+            const card = document.createElement('div');
+            card.classList.add('playlist-card');
+            card.dataset.id = song.id;
+            card.innerHTML = `
+                <img src="${song.cover}" alt="Album Cover">
+                <h3>${song.title}</h3>
+                <p>${song.artist}</p>
+                <button class="save-btn">Simpan ke Library</button>
+            `;
+            card.addEventListener('click', () => {
+                currentSongsList = songs;
+                currentSongIndex = index;
+                loadSong(currentSongIndex);
+                if (!isPlaying) {
+                    playPause();
+                } else {
+                    audioPlayer.play();
+                }
+            });
+            
+            const saveBtn = card.querySelector('.save-btn');
+            saveBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                saveToLibrary(song);
+            });
+
+            container.appendChild(card);
+        });
+    };
+    
+    const toggleLightMode = () => {
+        document.body.classList.toggle('light-mode');
+        const isLightMode = document.body.classList.contains('light-mode');
+        lightModeToggle.innerHTML = isLightMode ? '<i class="fa fa-adjust"></i>' : '<i class="fa fa-adjust"></i>';
+    };
+
+    homeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        showHome();
+    });
+    libraryBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        showLibrary();
+    });
+    backBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        showHome();
+    });
+    
+    lightModeToggle.addEventListener('click', toggleLightMode);
+    
+    // Fungsi untuk menampilkan/menyembunyikan sidebar
+    toggleSidebarBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+        mainContent.classList.toggle('shifted');
+    });
+
+    searchInput.addEventListener('input', (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        const filteredSongs = allSongs.filter(song => {
+            return song.title.toLowerCase().includes(searchTerm) || 
+                   song.artist.toLowerCase().includes(searchTerm);
+        });
+        showSongsView(filteredSongs, 'Hasil Pencarian');
+    });
+
+    const showSongsView = (songs, title) => {
+        homeView.style.display = 'none';
+        libraryView.style.display = 'none';
+        songsView.style.display = 'block';
+        currentPlaylistTitle.textContent = title;
+        currentSongsList = songs;
+        displaySongs(currentSongsList, songsGrid);
+    };
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        showHome();
+        loadSong(0); 
+    });
+</script>
+</body>
+</html>
